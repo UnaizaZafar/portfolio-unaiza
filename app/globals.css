@@ -38,6 +38,7 @@ body {
   }
 }
 .download-button {
+  width: max-content;
   position: relative;
   border-width: 0;
   color: white;

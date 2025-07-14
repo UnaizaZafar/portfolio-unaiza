@@ -1,19 +1,33 @@
+"use client";
 import Link from "next/link";
-import Tags from "./components/Tags";
+import { useEffect, useRef } from "react";
+import TextAnimations from "./components/TextAnimations";
 export default function Home() {
+  const wordsRef = useRef();
+  const lineRef = useRef([]);
+  TextAnimations({ wordAnimation: wordsRef, LineAnimation: lineRef });
+
   return (
     <div className="bg-[#F2E9E4] h-screen flex flex-col gap-6 items-center justify-center">
-      <h1 className="font-gamilia text-[160px] font-medium leading-32 text-center text-[#22223B] max-w-[60%] ">
+      <h1
+        ref={wordsRef}
+        className="font-gamilia text-[160px] font-medium leading-32 text-center text-[#22223B] max-w-3/5 "
+      >
         Design meets development in my little corner of the web
       </h1>
-      <p className="text-xl font-cobe">
+
+      <p
+        ref={(el) => (lineRef.current[0] = el)}
+        className="text-xl font-cobe opacity-0"
+      >
         {/* I create immersive digital experiences with code and creativity. */}
         I'm Unaiza, a frontend developer building elegant web experiences.
       </p>
       <Link
+        ref={(el) => (lineRef.current[1] = el)}
         download={"UnaizaZ-Resume"}
         href="/Unaiza Zafar Resume.pdf"
-        className="download-button font-cobe"
+        className="opacity-0 download-button font-cobe transition-all duration-300 ease-in-out"
       >
         <div className="docs">
           {/* File icon */}
@@ -54,14 +68,6 @@ export default function Home() {
           </svg>
         </div>
       </Link>
-
-      {/* <Link
-        download={"UnaizaZ-Resume"}
-        href="/Unaiza Zafar Resume.pdf"
-        className="animated-background text-white font-space-grostesk drop-shadow-md/50 bg-gradient-to-bl from-[#d9673d] to-[#ecb651]  rounded-3xl py-3 px-5  text-xl font-medium"
-      >
-        Download Resume
-      </Link> */}
     </div>
   );
 }
