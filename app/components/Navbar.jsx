@@ -2,23 +2,23 @@
 import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
-import { useState,useEffect } from "react"
+import { useState } from "react"
 const menu = [
-    {
-        id: 1,
-        name: "👤 About Me",
-        link: "#about"
-    },
-    {
-        id: 2,
-        name: "🎓 My Learning Journey",
-        link: "#learning"
-    },
-    {
-        id: 3,
-        name: "💼 Where I’ve Worked ",
-        link: "#work-experience"
-    },
+    // {
+    //     id: 1,
+    //     name: "👤 About Me",
+    //     link: "#about"
+    // },
+    // {
+    //     id: 2,
+    //     name: "🎓 My Learning Journey",
+    //     link: "#learning"
+    // },
+    // {
+    //     id: 3,
+    //     name: "💼 Where I’ve Worked ",
+    //     link: "#work-experience"
+    // },
     {
         id: 4,
         name: "🛠️ Portfolio ",
@@ -36,23 +36,12 @@ const menu = [
     },
 ]
 const Navbar = () => {
-    useEffect(() => {
-        const handleHashChange = () => {
-            console.log(window.location.hash); // e.g., "#about"
-        };
-
-        window.addEventListener("hashchange", handleHashChange);
-
-        return () => {
-            window.removeEventListener("hashchange", handleHashChange);
-        };
-    }, []);
-
+ 
     // const [active, setActive] = useState(false);
     const pathname = usePathname();
     console.log(pathname)
     return (
-        <div className="bg-black w-full rounded-b-3xl text-white py-6 px-8 z-10">
+        <div className="bg-black w-full rounded-b-3xl text-white py-6 px-8 z-10  fixed">
             <div className="max-w-[1920px] flex justify-between items-center">
                 <Link href={"/"}>
                     <Image src={"/images/uz-logo.webp"} width={70} height={70} alt="Logo" />

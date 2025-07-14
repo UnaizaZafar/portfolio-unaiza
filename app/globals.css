@@ -1,16 +1,101 @@
 @import "tailwindcss";
 @theme {
-  --font-inter: "Inter", sans-serif;
-  --font-space-grostesk: "Space_Grotesk", sans-serif;
+  --font-gamilia: "gamilia", sans-serif;
+  --font-cobe: "cobe", sans-serif;
+
 }
 body {
   background: var(--background);
   color: var(--foreground);
   scroll-behavior: smooth;
+  cursor: default;
 }
 .main-container {
   width: "100%";
   max-width: 1920px;
   margin-left: auto;
   margin-right: auto;
+  background-color: #fff2e4;
+}
+.bg-gradient {
+  background: linear-gradient(120deg, #fff2e4 0%, #fcf6ef 70%, #ffdfe1 100%);
+}
+.animated-background {
+  background-size: 400%;
+  -webkit-animation: animation 3s ease infinite;
+  -moz-animation: animation 3s ease infinite;
+  animation: animation 3s ease infinite;
+}
+
+@keyframes animation {
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.download-button {
+  position: relative;
+  border-width: 0;
+  color: white;
+  font-size: 20px;
+  font-weight: 600;
+  border-radius: 4px;
+  z-index: 1;
+}
+
+.download-button .docs {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  min-height: 40px;
+  padding: 0 10px;
+  border-radius: 4px;
+  z-index: 1;
+  background-color: #242a35;
+  border: solid 1px #e8e8e82d;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  max-width: 90%;
+  margin: 0 auto;
+  z-index: -1;
+  border-radius: 4px;
+  transform: translateY(0%);
+  background-color: #01e056;
+  border: solid 1px #01e0572d;
+  transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.download-button:hover .download {
+  transform: translateY(100%);
+}
+
+.download svg polyline,
+.download svg line {
+  animation: docs 1s infinite;
+}
+
+@keyframes docs {
+  0% {
+    transform: translateY(0%);
+  }
+
+  50% {
+    transform: translateY(-15%);
+  }
+
+  100% {
+    transform: translateY(0%);
+  }
 }

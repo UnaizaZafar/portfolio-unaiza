@@ -1,17 +1,16 @@
-import { Inter, Space_Grotesk } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
 
-const spaceGrotesk = Space_Grotesk({
-  variable: "--font-space-grostesk",
-  weight: ["300", "400", "500", "700", "600"],
-  subsets: ["latin"],
+export const gamilia = localFont({
+  src: "../public/fonts/GamiliademoRegular.otf",
+  variable: "--font-gamilia",
+  display: "swap",
 });
-
-const inter = Inter({
-  variable: "--font-inter",
-  weight: ["100", "300", "400", "700", "900"],
-  subsets: ["latin"],
+export const cobe = localFont({
+  src: "../public/fonts/Cobe-Regular.ttf",
+  variable: "--font-cobe",
+  display: "swap",
 });
 
 export const metadata = {
@@ -22,10 +21,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
-        className={` ${inter.variable} ${spaceGrotesk.variable} antialiased`}
-      >
-        <Navbar />
+      <body className={` ${cobe.variable} ${gamilia.variable} font-cobe antialiased`}>
+        {/* <Navbar /> */}
         {children}
       </body>
     </html>
