@@ -2,7 +2,8 @@
 @theme {
   --font-gamilia: "gamilia", sans-serif;
   --font-cobe: "cobe", sans-serif;
-
+  --color-primary: #22223b;
+  --color-secondary: #f2e9e4;
 }
 body {
   background: var(--background);
