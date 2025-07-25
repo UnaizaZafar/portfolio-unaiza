@@ -3,58 +3,40 @@ import Image from "next/image"
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-const menu = [
-    // {
-    //     id: 1,
-    //     name: "👤 About Me",
-    //     link: "#about"
-    // },
-    // {
-    //     id: 2,
-    //     name: "🎓 My Learning Journey",
-    //     link: "#learning"
-    // },
-    // {
-    //     id: 3,
-    //     name: "💼 Where I’ve Worked ",
-    //     link: "#work-experience"
-    // },
-    {
-        id: 4,
-        name: "🛠️ Portfolio ",
-        link: "#portfolio"
-    },
-    {
-        id: 5,
-        name: "💡My Toolbox ",
-        link: "#toolbox"
-    },
-    {
-        id: 6,
-        name: "📬 Let’s Connect",
-        link: "#contact"
-    },
-]
+import { menu } from "../utils/data"
 const Navbar = () => {
- 
+
     // const [active, setActive] = useState(false);
     const pathname = usePathname();
     console.log(pathname)
     return (
-        <div className="bg-black w-full rounded-b-3xl text-white py-6 px-8 z-10  fixed">
-            <div className="max-w-[1920px] flex justify-between items-center">
+        <div className="bg-mauve w-max place-self-center rounded-full overflow-hidden text-secondary top-4 z-10 fixed">
+            <div className=" flex justify-between items-center px-5">
                 <Link href={"/"}>
-                    <Image src={"/images/uz-logo.webp"} width={70} height={70} alt="Logo" />
+                    <Image src={"/images/uz-logo-2.webp"} width={70} height={70} alt="Logo" />
                 </Link>
-                <div className={`flex gap-8 font-space-grostesk text-xl font-medium`}>
+                <div className="flex gap-3 w-151 justify-between">
                     {menu.map((item) => (
-                        <Link className={`${pathname === "#about" ? "bg-white text-black" : "hover:bg-white hover:text-black"} rounded-3xl  p-3 transition-all duration-500 ease-in-out`}
-                            key={item.id} href={item.link}>{item.name}
-                        </Link>
+                        <Link
+                            key={item.id}
+                            href={item.link}
+                            className={`group flex items-center gap-2 rounded-3xl py-2 px-3 transition-all duration-500 ease-in-out
+        ${pathname === item.link ? "bg-white text-deep-blue" : "hover:bg-white hover:text-deep-blue"}
+      `}
+                        >
+                            <div>{item.icon}</div>
 
+                            <p
+                                className={` hidden sm:inline-block max-w-0 group-hover:max-w-[160px]  overflow-hidden whitespace-nowrap
+          transition-[max-width] duration-500 ease-in-out opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0
+          text-xl font-medium
+        `}
+                            >
+                                {item.name}
+                            </p>
+                        </Link>
                     ))}
                 </div>
-                <Image src={"/images/uz-logo.webp"} width={70} height={70} alt="Logo" className="invisible" />
 
             </div>
         </div>

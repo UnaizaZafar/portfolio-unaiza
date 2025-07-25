@@ -4,6 +4,9 @@
   --font-cobe: "cobe", sans-serif;
   --color-primary: #22223b;
   --color-secondary: #f2e9e4;
+  --color-deep-blue: #4a4e69;
+  --color-mauve: #9a8c98;
+  --color-taupe: #c9ada7;
 }
 body {
   background: var(--background);
@@ -58,7 +61,7 @@ body {
   padding: 0 10px;
   border-radius: 4px;
   z-index: 1;
-  background-color: #242a35;
+  background-color: #c9ada7;
   border: solid 1px #e8e8e82d;
   transition: all 0.5s cubic-bezier(0.77, 0, 0.175, 1);
 }

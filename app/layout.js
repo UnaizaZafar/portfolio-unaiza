@@ -22,7 +22,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={` ${cobe.variable} ${gamilia.variable} font-cobe antialiased`}>
-        {/* <Navbar /> */}
+        <Navbar />
         {children}
       </body>
     </html>
