@@ -39,9 +39,9 @@ const AboutMe = () => {
     }, [])
     return (
         <div
-            className=" h-screen  flex justify-between items-center bg-primary mx-auto px-32">
-            <div className="grid grid-cols-3 gap-3">
-                <p ref={fadeDownwardRef} className="font-gamilia text-[100px] text-secondary">Hi! I'm Unaiza Zafar</p>
+            className=" min-h-screen  flex justify-between items-center bg-primary mx-auto px-4 xl:px-32">
+            <div className="grid grid-cols-1 xl:grid-cols-3 gap-3">
+                <p ref={fadeDownwardRef} className="font-gamilia text-7xl xl:text-[100px] text-secondary">Hi! I'm Unaiza Zafar</p>
                 <p ref={fadeUpwardRef} className="text-2xl/loose col-span-2 text-secondary">I’m a 23-year-old frontend developer who’s been working professionally for nearly a year.
                     My journey with technology began as curiosity soon turned into a passion for crafting beautiful, responsive web experiences.
                     <br />
