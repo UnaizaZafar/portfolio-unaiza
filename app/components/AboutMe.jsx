@@ -38,7 +38,7 @@ const AboutMe = () => {
         }
     }, [])
     return (
-        <div
+        <div id="about"
             className=" min-h-screen  flex justify-between items-center bg-primary mx-auto px-4 xl:px-32">
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-3">
                 <p ref={fadeDownwardRef} className="font-gamilia text-7xl xl:text-[100px] text-secondary">Hi! I'm Unaiza Zafar</p>
