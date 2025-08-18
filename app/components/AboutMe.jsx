@@ -49,7 +49,7 @@ const AboutMe = () => {
                     <br />
                     This journey hasn’t been perfect — I’ve made mistakes, and I know I’ll make more. But I’ve learned that mistakes are just part of the process. What matters is the growth that comes from them, and the love for what I do that keeps me moving forward.
 
-                    Stick around — I’ll be sharing my growth, projects, and learnings as I continue building in public.</p>
+                  </p>
             </div>
         </div>
     )
