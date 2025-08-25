@@ -1,82 +1,97 @@
-'use client'
-import { useEffect, useRef } from "react";
-import gsap from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Image from "next/image";
-import { experience } from "../utils/data";
+'use client';
+import { useEffect, useLayoutEffect, useRef, useState } from 'react';
+import gsap from 'gsap';
+import { ScrollTrigger } from 'gsap/ScrollTrigger';
+import Image from 'next/image';
+import { experience } from '../utils/data';
+
 const workExp = [...experience].reverse();
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Experience() {
     const containerRef = useRef(null);
     const trackRef = useRef(null);
-
+    const cardRef = useRef([]);
+    const [maxHeight, setMaxHeight] = useState(0);
     useEffect(() => {
+        if (cardRef.current.length) {
+            const heights = cardRef.current.map(card => card.offsetHeight);
+            setMaxHeight(Math.max(...heights));
+        }
+    }, [workExp])
+
+    useLayoutEffect(() => {
         const ctx = gsap.context(() => {
             const container = containerRef.current;
             const track = trackRef.current;
-            if (!container || !track) return;
+
+            // ensure starting position and proper measurement
+            gsap.set(track, { x: 0 });
+
+            const getScrollAmount = () =>
+                track.scrollWidth - container.offsetWidth;
 
             gsap.to(track, {
-                x: () => -(track.scrollWidth - container.clientWidth),
-                ease: "none",
+                x: () => -getScrollAmount(),
+                ease: 'none',
                 scrollTrigger: {
                     trigger: container,
+                    start: 'top top',
+                    end: () => `+=${getScrollAmount()}`,
                     pin: true,
-                    scrub: 1,
-                    end: () => "+=" + (track.scrollWidth - container.clientWidth),
-                },
+                    scrub: true,
+                    invalidateOnRefresh: true
+                }
             });
+
+            // refresh after images/fonts load
+            const onLoad = () => ScrollTrigger.refresh();
+            window.addEventListener('load', onLoad);
+            return () => {
+                window.removeEventListener('load', onLoad);
+            };
         }, containerRef);
 
         return () => ctx.revert();
     }, []);
 
     return (
-        <div
+        <section
             ref={containerRef}
-            className=" relative overflow-hidden h-screen bg-white"
-             style={{ height: "100vh" }}
+            className="relative h-screen overflow-hidden bg-white"
         >
-            {/* ✅ Fixed Heading */}
-            <h2 className="absolute top-10 left-10 z-20 font-gamilia text-7xl xl:text-[100px] text-primary">
+            <h2 className="absolute top-20 left-20 z-10 font-gamilia text-7xl xl:text-[100px] text-primary">
                 Work Experience
             </h2>
 
-            {/* ✅ Track that scrolls */}
             <div
                 ref={trackRef}
-                className="flex h-full"
+                className="absolute inset-0 flex items-center gap-6 px-24"
             >
+
                 {workExp.map((item, i) => (
-                    <div
+                    <article
+                        ref={el => cardRef.current[i] = el}
                         key={i}
-                        style={{
-                            width: "100vw", // ✅ fixes white space issue
-                            height: "100vh",
-                            flexShrink: 0,
-                        }}
-                        className="flex items-center justify-center"
+                        style={{ height: maxHeight ? `${maxHeight}px` : 'auto' }}
+                        className="shrink-0 w-200 items-stretch rounded-3xl border border-pink-300/60  first:bg-[#A0EEC2] nth-2:bg-[#F9C5D1] last:bg-[#FDE2E4] backdrop-blur-xl shadow-xl p-6 "
                     >
-                        <div className="exp-card bg-secondary/30 drop-shadow-2xl backdrop-blur-3xl rounded-3xl p-6 flex flex-col gap-3 shrink-0 w-180">
-                            <div className="flex flex-col gap-2 text-primary">
-                                <Image
-                                    width={50}
-                                    height={50}
-                                    alt={item.companyName}
-                                    src={`/logos/${item.logo}.webp`}
-                                    className="rounded-full h-12.5"
-                                />
-                                <p className="font-semibold text-2xl">{item.companyName}</p>
-                                <p className="text-2xl">{item.designation}</p>
-                                <p className="italic text-lg">{item.duration}</p>
-                                <p className="text-xl">{item.desc}</p>
-                            </div>
-                        </div>
-                    </div>
-                )
-                )}
+                        <Image
+                            width={48}
+                            height={48}
+                            alt={item.companyName}
+                            src={`/logos/${item.logo}.webp`}
+                            className="rounded-full"
+                        />
+                        <p className="text-2xl leading-tight">
+                            {item.companyName}
+                        </p>
+                        <p className="italic text-lg">{item.duration}</p>
+                        <p className="text-2xl font-medium text-primary">{item.designation}</p>
+                        <p className="text-xl text-primary/80">{item.desc}</p>
+                    </article>
+                ))}
             </div>
-        </div>
+        </section>
     );
 }
