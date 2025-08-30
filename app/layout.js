@@ -1,6 +1,7 @@
 import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "./components/Navbar";
+import Footer from "./components/Footer";
 
 export const gamilia = localFont({
   src: "../public/fonts/GamiliademoRegular.otf",
@@ -24,6 +25,7 @@ export default function RootLayout({ children }) {
       <body className={` ${cobe.variable} ${gamilia.variable} font-cobe antialiased`}>
         <Navbar />
         {children}
+        <Footer/>
       </body>
     </html>
   );

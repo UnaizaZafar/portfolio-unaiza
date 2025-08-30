@@ -10,7 +10,7 @@ const Navbar = () => {
     const pathname = usePathname();
     console.log(pathname)
     return (
-        <div className="bg-mauve w-max place-self-center rounded-full overflow-hidden text-secondary top-4 z-10 fixed">
+        <div className="bg-mauve w-max place-self-center rounded-full overflow-hidden text-secondary top-4 z-10 fixed hidden md:block">
             <div className=" flex justify-between items-center px-5">
                 <Link href={"/"}>
                     <Image src={"/images/uz-logo-2.webp"} width={70} height={70} alt="Logo" />
