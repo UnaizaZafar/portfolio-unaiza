@@ -56,7 +56,7 @@ export default function Experience() {
     }, []);
 
     return (
-        <section
+        <section id='work-experience'
             ref={containerRef}
             className="relative h-screen overflow-hidden bg-white"
         >

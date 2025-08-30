@@ -3,7 +3,7 @@ import Link from "next/link"
 import { githubIcon, gmailIcon, linkedinIcon } from "../utils/svgs"
 const Footer = () => {
   return (
-    <div className='bg-black rounded-t-3xl p-4 xl:p-24'>
+    <div id="contact" className='bg-black rounded-t-3xl p-4 pb-24 xl:p-24'>
       <div className="flex flex-col gap-6 items-center justify-center">
         <div className="text-white flex max-md:flex-col gap-3 md:gap-6 justify-center">
           {menu.map((item) => (
