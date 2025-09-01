@@ -24,44 +24,39 @@ export default function Experience() {
         const ctx = gsap.context(() => {
             const container = containerRef.current;
             const track = trackRef.current;
+            if (!container || !track) return; 
 
-            // ensure starting position and proper measurement
             gsap.set(track, { x: 0 });
 
-            const getScrollAmount = () =>
-                track.scrollWidth - container.offsetWidth;
+            const getScrollAmount = () => track.scrollWidth - container.offsetWidth;
 
             gsap.to(track, {
                 x: () => -getScrollAmount(),
-                ease: 'none',
+                ease: "none",
                 scrollTrigger: {
                     trigger: container,
-                    start: 'top top',
+                    start: "top top",
                     end: () => `+=${getScrollAmount()}`,
                     pin: true,
                     scrub: true,
-                    invalidateOnRefresh: true
-                }
+                    invalidateOnRefresh: true, 
+                },
             });
 
-            // refresh after images/fonts load
-            const onLoad = () => ScrollTrigger.refresh();
-            window.addEventListener('load', onLoad);
-            return () => {
-                window.removeEventListener('load', onLoad);
-            };
+            ScrollTrigger.refresh(); 
         }, containerRef);
 
         return () => ctx.revert();
     }, []);
+
 
     return (
         <section id='work-experience'
             ref={containerRef}
             className="relative h-screen overflow-hidden bg-white"
         >
-            <h2 className="absolute top-20 left-20 z-10 font-gamilia text-7xl xl:text-[100px] text-primary">
-                Work Experience
+            <h2 className="absolute top-8 md:top-20 left-6 lg:left-20 z-10 font-gamilia text-6xl lg:text-7xl xl:text-[100px] text-primary">
+                Experience
             </h2>
 
             <div
@@ -74,7 +69,7 @@ export default function Experience() {
                         ref={el => cardRef.current[i] = el}
                         key={i}
                         style={{ height: maxHeight ? `${maxHeight}px` : 'auto' }}
-                        className="shrink-0 w-200 items-stretch rounded-3xl border border-pink-300/60  first:bg-[#A0EEC2] nth-2:bg-[#F9C5D1] last:bg-[#FDE2E4] backdrop-blur-xl shadow-xl p-6 "
+                        className="shrink-0 w-[85vw] sm:w-[70vw] md:w-[55vw] lg:w-[45vw] xl:w-[40vw] items-stretch rounded-3xl border border-pink-300/60  first:bg-[#A0EEC2] nth-2:bg-[#F9C5D1] last:bg-[#FDE2E4] backdrop-blur-xl shadow-xl p-6 "
                     >
                         <Image
                             width={48}
