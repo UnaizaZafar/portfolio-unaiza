@@ -41,13 +41,13 @@ const Navbar = () => {
 
                 </div>
             </div>
-            <HamburgerMenu pathname={pathname} />
+            <HamburgerMenu />
         </>
     )
 }
 export default Navbar
-const HamburgerMenu = ({ pathname }) => {
-    const [active, setActive] = useState("about");
+const HamburgerMenu = () => {
+    const [active, setActive] = useState("");
 
     useEffect(() => {
         menu.forEach((item) => {
