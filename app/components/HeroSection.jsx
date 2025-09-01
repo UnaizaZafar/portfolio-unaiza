@@ -8,10 +8,10 @@ const HeroSection = () => {
     TextAnimations({ wordAnimation: wordsRef, LineAnimation: lineRef });
 
     return (
-        <section id="hero" className="bg-secondary h-screen flex flex-col gap-6 items-center justify-center px-4">
+        <section id="hero" className="bg-secondary h-screen flex flex-col gap-6 items-center justify-center px-6">
             <h1
                 ref={wordsRef}
-                className="font-gamilia text-7xl md:text-9xl 2xl:text-[160px] font-medium xl:leading-32 text-center text-primary w-full xl:max-w-3/5 "
+                className="font-gamilia text-6xl md:text-9xl 2xl:text-[160px] font-medium xl:leading-32 text-center text-primary w-full xl:max-w-3/5 "
             >
                 Design meets development in my little corner of the web
             </h1>

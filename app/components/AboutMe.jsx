@@ -39,17 +39,16 @@ const AboutMe = () => {
     }, [])
     return (
         <div id="about"
-            className=" min-h-screen  flex justify-between items-center bg-primary mx-auto px-4 xl:px-32">
+            className=" min-h-screen  flex justify-between items-center bg-primary mx-auto px-6 py-8 xl:px-32">
             <div className="grid grid-cols-1 xl:grid-cols-3 gap-3">
-                <p ref={fadeDownwardRef} className="font-gamilia text-7xl xl:text-[100px] text-secondary">Hi! I'm Unaiza Zafar</p>
-                <p ref={fadeUpwardRef} className="text-2xl/loose col-span-2 text-secondary">I’m a 23-year-old frontend developer who’s been working professionally for nearly a year.
-                    My journey with technology began as curiosity soon turned into a passion for crafting beautiful, responsive web experiences.
+                <p ref={fadeDownwardRef} className="font-gamilia text-6xl lg:text-7xl xl:text-[100px] text-secondary">Hi! I'm Unaiza Zafar</p>
+                <p ref={fadeUpwardRef} className="text-xl/loose lg:text-2xl/loose col-span-2 text-secondary">
+                    I’m a 23-year-old Frontend Developer with 1+ year of professional experience and over 12 completed projects. What started as curiosity quickly grew into a passion for crafting clean, responsive, and user-focused web experiences.
                     <br />
-                    Currently working as a frontend developer, I focus on building clean, structured, and user-focused interfaces using tools like React, Next.js, and Tailwind CSS. I value maintainable code, clear structure, and strong logic. I’m quick to pick up new technologies and love solving challenges with a curious mindset.
+                    I build interfaces with React, Next.js, and Tailwind CSS, always aiming for code that’s structured, maintainable, and logical. I enjoy collaborating with teams, communicating ideas clearly, and using modern AI tools to speed up development and problem-solving.
                     <br />
-                    This journey hasn’t been perfect — I’ve made mistakes, and I know I’ll make more. But I’ve learned that mistakes are just part of the process. What matters is the growth that comes from them, and the love for what I do that keeps me moving forward.
-
-                  </p>
+                    This journey hasn’t been perfect; I’ve made mistakes, and I’ll make more. But every challenge has been a lesson, and what keeps me moving forward is the growth, creativity, and love for building that comes with being a developer.
+                </p>
             </div>
         </div>
     )
