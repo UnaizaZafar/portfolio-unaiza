@@ -162,3 +162,169 @@ export const experience = [
   //     desc:"",
   // },
 ];
+export const projects = [
+  {
+    id: 1,
+    name: "Advanced counceling associates",
+    desc: (
+      <>
+        Contributed as a Frontend Developer to build a mental health and
+        counseling services website using Next.js, Tailwind CSS, and Framer
+        Motion. Implemented animations, responsive UI, and performance
+        optimizations to ensure smooth, engaging experiences for users seeking
+        support. Collaborated with backend developers and designers to align on
+        functionality and accessibility best practices.
+      </>
+    ),
+    imageSrc: "aca",
+    imageAlt:
+      "Advanced Councelling Associates- mental health services platform",
+    gitLink:
+      "https://github.com/UnaizaZafar/advanced-counselling-associates.git",
+    webLink: "https://main.djnukwmwo4i0p.amplifyapp.com/",
+  },
+  {
+    id: 2,
+    name: "Samina Khalid Ghurki",
+    desc: (
+      <>
+        Worked as a Frontend Developer on a personal branding website for a
+        political client. Without a provided Figma design, recreated the
+        interface based on a single image reference. Built the project in
+        Next.js with Tailwind CSS, ensuring responsive layouts and optimized
+        performance across devices. Delivered a polished product reflecting the
+        client’s identity with strong attention to detail and adaptability.
+      </>
+    ),
+    darkTheme: true,
+    imageSrc: "skg",
+    imageAlt: "SKG- personal Website",
+    gitLink: "https://github.com/UnaizaZafar/skg-next.git",
+    webLink: "https://main.d7292mdyn5r02.amplifyapp.com/",
+  },
+  {
+    id: 3,
+    name: "AG InfoTech - Cooperate Website",
+    desc: (
+      <>
+        As a Frontend Developer & UI Designer, worked on AG Infotech’s flagship
+        corporate site using Next.js and Tailwind CSS. Took ownership of the
+        design process where Figma files weren’t provided, creating layouts,
+        color schemes, and interaction flows. Developed responsive, SEO-friendly
+        components and integrated them into the company’s branding. This was one
+        of the earliest professional projects, building confidence in balancing
+        design and development roles.
+      </>
+    ),
+    imageSrc: "ag",
+    imageAlt: "AG InfoTech - Cooperate Website",
+    // gitLink: "",
+    webLink: "https://www.aginfotech.co/",
+  },
+  {
+    id: 4,
+    name: "Keller Immigration Law",
+    desc: (
+      <>
+        Contributed as a Frontend Developer to the Keller Immigration Law
+        website using Next.js and Tailwind CSS. Focused on rapid development
+        cycles, ensuring responsive pages, optimized loading speeds, and
+        accessibility compliance. Successfully collaborated in a fast-paced
+        environment, balancing quality and delivery deadlines.
+      </>
+    ),
+    darkTheme: true,
+    imageSrc: "keller",
+    imageAlt: "law firm website ",
+    // gitLink: "",
+    webLink: "https://kellerimmigration.com/",
+  },
+  // {
+  //   id: 5,
+  //   name: "Paul Mankin Law",
+  //   desc: (
+  //     <>
+  //       A professional website for a law firm, designed to highlight core legal
+  //       services while providing an extensive blog library as a resource hub for
+  //       clients. The platform ensures accessibility, readability, and
+  //       trust-building through a structured and responsive layout.
+  //       <br />
+  //       Technologies Used: Next.js, Tailwind CSS
+  //       <br />
+  //       Role: Frontend Developer (Team Project)
+  //       <br />
+  //       Contributed to the development of the website and managed the
+  //       integration of a large-scale content section, adding and formatting over
+  //       400 blog posts in under a week to ensure consistent presentation and
+  //       user-friendly navigation
+  //     </>
+  //   ),
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "https://github.com/UnaizaZafar/paul-mankin-law",
+  //   webLink: "",
+  // },
+  // {
+  //   id: 6,
+  //   name: "ASH Portal",
+  //   desc: "A portal built with TypeScript, Next.js, and Node.js, designed to streamline internal workflows. Contributed to frontend architecture, responsive UI, and integration with backend functionality.",
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "https://github.com/UnaizaZafar/ash-portal.git",
+  //   webLink: "",
+  // },
+  // {
+  //   id: 7,
+  //   name: "Advanced counceling associates",
+  //   desc: "",
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "",
+  //   webLink: "",
+  // },
+  // {
+  //   id: 8,
+  //   name: "Advanced counceling associates",
+  //   desc: "",
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "",
+  //   webLink: "",
+  // },
+  // {
+  //   id: 9,
+  //   name: "Advanced counceling associates",
+  //   desc: "",
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "",
+  //   webLink: "",
+  // },
+  // {
+  //   id: 10,
+  //   name: "Advanced counceling associates",
+  //   desc: "",
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "",
+  //   webLink: "",
+  // },
+  // {
+  //   id: 11,
+  //   name: "Advanced counceling associates",
+  //   desc: "",
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "",
+  //   webLink: "",
+  // },
+  // {
+  //   id: 12,
+  //   name: "Advanced counceling associates",
+  //   desc: "",
+  //   imageSrc: "",
+  //   imageAlt: "",
+  //   gitLink: "",
+  //   webLink: "",
+  // },
+];

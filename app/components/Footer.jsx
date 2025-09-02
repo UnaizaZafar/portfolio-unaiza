@@ -4,7 +4,7 @@ import { githubIcon, gmailIcon, linkedinIcon } from "../utils/svgs"
 const Footer = () => {
   return (
     <div id="contact" className='bg-black rounded-t-3xl p-4 pb-24 xl:p-24'>
-      <div className="flex flex-col gap-6 items-center justify-center">
+      <div className="flex flex-col gap-6 items-center justify-center max-w-screen-xl mx-auto">
         <div className="text-white flex max-md:flex-col gap-3 md:gap-6 justify-center">
           {menu.map((item) => (
             <div key={item.id} className="flex flex-col items-center gap-1 group">
