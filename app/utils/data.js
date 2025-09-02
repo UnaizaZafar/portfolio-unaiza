@@ -168,12 +168,13 @@ export const projects = [
     name: "Advanced counceling associates",
     desc: (
       <>
-        Contributed as a Frontend Developer to build a mental health and
-        counseling services website using Next.js, Tailwind CSS, and Framer
-        Motion. Implemented animations, responsive UI, and performance
-        optimizations to ensure smooth, engaging experiences for users seeking
-        support. Collaborated with backend developers and designers to align on
-        functionality and accessibility best practices.
+        Contributed as a{" "}
+        <span className="underline underline-offset-2">Frontend Developer</span> to build a
+        mental health and counseling services website using Next.js, Tailwind
+        CSS, and Framer Motion. Implemented animations, responsive UI, and
+        performance optimizations to ensure smooth, engaging experiences for
+        users seeking support. Collaborated with backend developers and
+        designers to align on functionality and accessibility best practices.
       </>
     ),
     imageSrc: "aca",
@@ -188,12 +189,13 @@ export const projects = [
     name: "Samina Khalid Ghurki",
     desc: (
       <>
-        Worked as a Frontend Developer on a personal branding website for a
-        political client. Without a provided Figma design, recreated the
-        interface based on a single image reference. Built the project in
-        Next.js with Tailwind CSS, ensuring responsive layouts and optimized
-        performance across devices. Delivered a polished product reflecting the
-        client’s identity with strong attention to detail and adaptability.
+        Worked as a <span className="underline underline-offset-2">Frontend Developer</span> on
+        a personal branding website for a political client. Without a provided
+        Figma design, recreated the interface based on a single image reference.
+        Built the project in Next.js with Tailwind CSS, ensuring responsive
+        layouts and optimized performance across devices. Delivered a polished
+        product reflecting the client’s identity with strong attention to detail
+        and adaptability.
       </>
     ),
     darkTheme: true,
@@ -207,13 +209,14 @@ export const projects = [
     name: "AG InfoTech - Cooperate Website",
     desc: (
       <>
-        As a Frontend Developer & UI Designer, worked on AG Infotech’s flagship
-        corporate site using Next.js and Tailwind CSS. Took ownership of the
-        design process where Figma files weren’t provided, creating layouts,
-        color schemes, and interaction flows. Developed responsive, SEO-friendly
-        components and integrated them into the company’s branding. This was one
-        of the earliest professional projects, building confidence in balancing
-        design and development roles.
+        As a{" "}
+        <span className="underline underline-offset-2">Frontend Developer & UI Designer</span>,
+        worked on AG Infotech’s flagship corporate site using Next.js and
+        Tailwind CSS. Took ownership of the design process where Figma files
+        weren’t provided, creating layouts, color schemes, and interaction
+        flows. Developed responsive, SEO-friendly components and integrated them
+        into the company’s branding. This was one of the earliest professional
+        projects, building confidence in balancing design and development roles.
       </>
     ),
     imageSrc: "ag",
@@ -226,10 +229,11 @@ export const projects = [
     name: "Keller Immigration Law",
     desc: (
       <>
-        Contributed as a Frontend Developer to the Keller Immigration Law
-        website using Next.js and Tailwind CSS. Focused on rapid development
-        cycles, ensuring responsive pages, optimized loading speeds, and
-        accessibility compliance. Successfully collaborated in a fast-paced
+        Contributed as a{" "}
+        <span className="underline underline-offset-2">Frontend Developer</span> to the Keller
+        Immigration Law website using Next.js and Tailwind CSS. Focused on rapid
+        development cycles, ensuring responsive pages, optimized loading speeds,
+        and accessibility compliance. Successfully collaborated in a fast-paced
         environment, balancing quality and delivery deadlines.
       </>
     ),
@@ -244,12 +248,13 @@ export const projects = [
     name: "Paul Mankin Law",
     desc: (
       <>
-        As a Frontend Developer, built and maintained Paul Mankin’s law firm
-        website using Next.js and Tailwind CSS. Besides implementing the UI,
-        contributed to large-scale content population by uploading and
-        formatting 400+ blog posts in under a week, ensuring consistency, SEO
-        optimization, and site stability. Demonstrated efficiency, attention to
-        detail, and time management under demanding content requirements.
+        As a <span className="underline underline-offset-2">Frontend Developer</span>, built
+        and maintained Paul Mankin’s law firm website using Next.js and Tailwind
+        CSS. Besides implementing the UI, contributed to large-scale content
+        population by uploading and formatting 400+ blog posts in under a week,
+        ensuring consistency, SEO optimization, and site stability. Demonstrated
+        efficiency, attention to detail, and time management under demanding
+        content requirements.
       </>
     ),
     darkTheme: true,
@@ -261,7 +266,16 @@ export const projects = [
   {
     id: 6,
     name: "ASH Portal",
-    desc: "Served as a Frontend Developer on an internal management platform project, utilizing TypeScript, Next.js, and backend integration. Designed the architecture for reusable UI components, implemented TypeScript types for safety, and ensured seamless interaction with APIs. This project highlighted adaptability and ability to work on scalable, enterprise-level solutions.",
+    desc: (
+      <>
+        Served as a <span className="underline underline-offset-2">Frontend Developer</span> on
+        an internal management platform project, utilizing TypeScript, Next.js,
+        and backend integration. Designed the architecture for reusable UI
+        components, implemented TypeScript types for safety, and ensured
+        seamless interaction with APIs. This project highlighted adaptability
+        and ability to work on scalable, enterprise-level solutions.
+      </>
+    ),
     darkTheme: true,
     imageSrc: "ash",
     imageAlt: "ASH management portal ",
@@ -273,7 +287,7 @@ export const projects = [
     name: "SNH Consultants",
     desc: (
       <>
-        Worked as a <span className="font-semibold">QA Engineer</span> to ensure
+        Worked as a <span className="underline underline-offset-2">QA Engineer</span> to ensure
         the quality and stability of the SNH Consultants website. Conducted
         manual testing across devices, logging functional bugs, UI
         inconsistencies, and performance issues. Created a detailed QA report
