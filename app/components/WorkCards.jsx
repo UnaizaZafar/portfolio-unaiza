@@ -19,24 +19,25 @@ const WorkCards = ({ item }) => {
                     {item.gitLink &&
                         <Link
                             href={item?.gitLink}
-                            className="w-max group relative flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-lg  text-white bg-gradient-to-r from-purple-600 to-indigo-900 overflow-hidden transition-transform "
+                            className="w-max group relative flex items-center gap-2 px-2 lg:px-4 py-2 rounded-xl font-medium lg:text-lg  text-white bg-gradient-to-r from-purple-600 to-indigo-900 overflow-hidden transition-transform "
                         >
                             <span className="absolute left-0 top-0 h-full w-[120%] -translate-x-[10%] skew-x-12 bg-black transition-transform duration-500 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></span>
 
                             <span className="relative z-10 flex items-center gap-2">
-                                {githubIcon} GitHub
+                                <span className="size-5 lg:size-7">{githubIcon}</span>
+                                GitHub
                             </span>
                         </Link>
                     }
                     {item.webLink &&
                         <Link
                             href={item.webLink}
-                            className="w-max group relative flex items-center gap-2 px-4 py-2 rounded-xl font-medium text-lg  text-white bg-gradient-to-r from-pink-600 to-rose-400 overflow-hidden transition-transform "
+                            className="w-max group relative flex items-center gap-2 px-2 lg:px-4 py-2 rounded-xl font-medium lg:text-lg  text-white bg-gradient-to-r from-pink-600 to-rose-400 overflow-hidden transition-transform "
                         >
                             <span className="absolute left-0 top-0 h-full w-[120%] -translate-x-[10%] skew-x-12 bg-black transition-transform duration-500 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></span>
 
                             <span className="relative z-10 flex items-center gap-2">
-                                {websiteIcon} Website
+                                <span className="size-5 lg:size-7">{websiteIcon}</span>   Website
                             </span>
                         </Link>
                     }
