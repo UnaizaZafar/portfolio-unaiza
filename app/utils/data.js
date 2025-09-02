@@ -239,53 +239,58 @@ export const projects = [
     // gitLink: "",
     webLink: "https://kellerimmigration.com/",
   },
-  // {
-  //   id: 5,
-  //   name: "Paul Mankin Law",
-  //   desc: (
-  //     <>
-  //       A professional website for a law firm, designed to highlight core legal
-  //       services while providing an extensive blog library as a resource hub for
-  //       clients. The platform ensures accessibility, readability, and
-  //       trust-building through a structured and responsive layout.
-  //       <br />
-  //       Technologies Used: Next.js, Tailwind CSS
-  //       <br />
-  //       Role: Frontend Developer (Team Project)
-  //       <br />
-  //       Contributed to the development of the website and managed the
-  //       integration of a large-scale content section, adding and formatting over
-  //       400 blog posts in under a week to ensure consistent presentation and
-  //       user-friendly navigation
-  //     </>
-  //   ),
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "https://github.com/UnaizaZafar/paul-mankin-law",
-  //   webLink: "",
-  // },
-  // {
-  //   id: 6,
-  //   name: "ASH Portal",
-  //   desc: "A portal built with TypeScript, Next.js, and Node.js, designed to streamline internal workflows. Contributed to frontend architecture, responsive UI, and integration with backend functionality.",
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "https://github.com/UnaizaZafar/ash-portal.git",
-  //   webLink: "",
-  // },
-  // {
-  //   id: 7,
-  //   name: "Advanced counceling associates",
-  //   desc: "",
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "",
-  //   webLink: "",
-  // },
+  {
+    id: 5,
+    name: "Paul Mankin Law",
+    desc: (
+      <>
+        As a Frontend Developer, built and maintained Paul Mankin’s law firm
+        website using Next.js and Tailwind CSS. Besides implementing the UI,
+        contributed to large-scale content population by uploading and
+        formatting 400+ blog posts in under a week, ensuring consistency, SEO
+        optimization, and site stability. Demonstrated efficiency, attention to
+        detail, and time management under demanding content requirements.
+      </>
+    ),
+    darkTheme: true,
+    imageSrc: "paul",
+    imageAlt: "law services website ",
+    gitLink: "https://github.com/UnaizaZafar/paul-mankin-law",
+    // webLink: "",
+  },
+  {
+    id: 6,
+    name: "ASH Portal",
+    desc: "Served as a Frontend Developer on an internal management platform project, utilizing TypeScript, Next.js, and backend integration. Designed the architecture for reusable UI components, implemented TypeScript types for safety, and ensured seamless interaction with APIs. This project highlighted adaptability and ability to work on scalable, enterprise-level solutions.",
+    darkTheme: true,
+    imageSrc: "ash",
+    imageAlt: "ASH management portal ",
+    gitLink: "https://github.com/UnaizaZafar/ash-portal.git",
+    // webLink: "",
+  },
+  {
+    id: 7,
+    name: "SNH Consultants",
+    desc: (
+      <>
+        Worked as a <span className="font-semibold">QA Engineer</span> to ensure
+        the quality and stability of the SNH Consultants website. Conducted
+        manual testing across devices, logging functional bugs, UI
+        inconsistencies, and performance issues. Created a detailed QA report
+        with categorized issues, reproduction steps, and severity levels,
+        directly supporting the development team in delivering a reliable and
+        polished product.
+      </>
+    ),
+    imageSrc: "snh",
+    imageAlt: "SNH Consultants website",
+    // gitLink: "",
+    webLink: "https://snhconsultants.co/",
+  },
   // {
   //   id: 8,
-  //   name: "Advanced counceling associates",
-  //   desc: "",
+  //   name: "React Jobs",
+  //   desc: "Created a React Jobs application with React.js and Tailwind CSS, simulating a modern job board. Implemented job listings, category-based filtering, and responsive design to ensure a smooth user experience. This project strengthened practical React skills, focusing on props, state, and reusable components.",
   //   imageSrc: "",
   //   imageAlt: "",
   //   gitLink: "",
