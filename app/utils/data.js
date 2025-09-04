@@ -169,10 +169,10 @@ export const projects = [
     desc: (
       <>
         Contributed as a{" "}
-        <span className="underline underline-offset-2">Frontend Developer</span> to build a
-        mental health and counseling services website using Next.js, Tailwind
-        CSS, and Framer Motion. Implemented animations, responsive UI, and
-        performance optimizations to ensure smooth, engaging experiences for
+        <span className="underline underline-offset-2">Frontend Developer</span>{" "}
+        to build a mental health and counseling services website using Next.js,
+        Tailwind CSS, and Framer Motion. Implemented animations, responsive UI,
+        and performance optimizations to ensure smooth, engaging experiences for
         users seeking support. Collaborated with backend developers and
         designers to align on functionality and accessibility best practices.
       </>
@@ -189,13 +189,14 @@ export const projects = [
     name: "Samina Khalid Ghurki",
     desc: (
       <>
-        Worked as a <span className="underline underline-offset-2">Frontend Developer</span> on
-        a personal branding website for a political client. Without a provided
-        Figma design, recreated the interface based on a single image reference.
-        Built the project in Next.js with Tailwind CSS, ensuring responsive
-        layouts and optimized performance across devices. Delivered a polished
-        product reflecting the client’s identity with strong attention to detail
-        and adaptability.
+        Worked as a{" "}
+        <span className="underline underline-offset-2">Frontend Developer</span>{" "}
+        on a personal branding website for a political client. Without a
+        provided Figma design, recreated the interface based on a single image
+        reference. Built the project in Next.js with Tailwind CSS, ensuring
+        responsive layouts and optimized performance across devices. Delivered a
+        polished product reflecting the client’s identity with strong attention
+        to detail and adaptability.
       </>
     ),
     darkTheme: true,
@@ -210,8 +211,10 @@ export const projects = [
     desc: (
       <>
         As a{" "}
-        <span className="underline underline-offset-2">Frontend Developer & UI Designer</span>,
-        worked on AG Infotech’s flagship corporate site using Next.js and
+        <span className="underline underline-offset-2">
+          Frontend Developer & UI Designer
+        </span>
+        , worked on AG Infotech’s flagship corporate site using Next.js and
         Tailwind CSS. Took ownership of the design process where Figma files
         weren’t provided, creating layouts, color schemes, and interaction
         flows. Developed responsive, SEO-friendly components and integrated them
@@ -230,11 +233,12 @@ export const projects = [
     desc: (
       <>
         Contributed as a{" "}
-        <span className="underline underline-offset-2">Frontend Developer</span> to the Keller
-        Immigration Law website using Next.js and Tailwind CSS. Focused on rapid
-        development cycles, ensuring responsive pages, optimized loading speeds,
-        and accessibility compliance. Successfully collaborated in a fast-paced
-        environment, balancing quality and delivery deadlines.
+        <span className="underline underline-offset-2">Frontend Developer</span>{" "}
+        to the Keller Immigration Law website using Next.js and Tailwind CSS.
+        Focused on rapid development cycles, ensuring responsive pages,
+        optimized loading speeds, and accessibility compliance. Successfully
+        collaborated in a fast-paced environment, balancing quality and delivery
+        deadlines.
       </>
     ),
     darkTheme: true,
@@ -248,13 +252,14 @@ export const projects = [
     name: "Paul Mankin Law",
     desc: (
       <>
-        As a <span className="underline underline-offset-2">Frontend Developer</span>, built
-        and maintained Paul Mankin’s law firm website using Next.js and Tailwind
-        CSS. Besides implementing the UI, contributed to large-scale content
-        population by uploading and formatting 400+ blog posts in under a week,
-        ensuring consistency, SEO optimization, and site stability. Demonstrated
-        efficiency, attention to detail, and time management under demanding
-        content requirements.
+        As a{" "}
+        <span className="underline underline-offset-2">Frontend Developer</span>
+        , built and maintained Paul Mankin’s law firm website using Next.js and
+        Tailwind CSS. Besides implementing the UI, contributed to large-scale
+        content population by uploading and formatting 400+ blog posts in under
+        a week, ensuring consistency, SEO optimization, and site stability.
+        Demonstrated efficiency, attention to detail, and time management under
+        demanding content requirements.
       </>
     ),
     darkTheme: true,
@@ -268,10 +273,11 @@ export const projects = [
     name: "ASH Portal",
     desc: (
       <>
-        Served as a <span className="underline underline-offset-2">Frontend Developer</span> on
-        an internal management platform project, utilizing TypeScript, Next.js,
-        and backend integration. Designed the architecture for reusable UI
-        components, implemented TypeScript types for safety, and ensured
+        Served as a{" "}
+        <span className="underline underline-offset-2">Frontend Developer</span>{" "}
+        on an internal management platform project, utilizing TypeScript,
+        Next.js, and backend integration. Designed the architecture for reusable
+        UI components, implemented TypeScript types for safety, and ensured
         seamless interaction with APIs. This project highlighted adaptability
         and ability to work on scalable, enterprise-level solutions.
       </>
@@ -287,9 +293,10 @@ export const projects = [
     name: "SNH Consultants",
     desc: (
       <>
-        Worked as a <span className="underline underline-offset-2">QA Engineer</span> to ensure
-        the quality and stability of the SNH Consultants website. Conducted
-        manual testing across devices, logging functional bugs, UI
+        Worked as a{" "}
+        <span className="underline underline-offset-2">QA Engineer</span> to
+        ensure the quality and stability of the SNH Consultants website.
+        Conducted manual testing across devices, logging functional bugs, UI
         inconsistencies, and performance issues. Created a detailed QA report
         with categorized issues, reproduction steps, and severity levels,
         directly supporting the development team in delivering a reliable and
@@ -301,49 +308,55 @@ export const projects = [
     // gitLink: "",
     webLink: "https://snhconsultants.co/",
   },
-  // {
-  //   id: 8,
-  //   name: "React Jobs",
-  //   desc: "Created a React Jobs application with React.js and Tailwind CSS, simulating a modern job board. Implemented job listings, category-based filtering, and responsive design to ensure a smooth user experience. This project strengthened practical React skills, focusing on props, state, and reusable components.",
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "",
-  //   webLink: "",
-  // },
-  // {
-  //   id: 9,
-  //   name: "Advanced counceling associates",
-  //   desc: "",
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "",
-  //   webLink: "",
-  // },
-  // {
-  //   id: 10,
-  //   name: "Advanced counceling associates",
-  //   desc: "",
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "",
-  //   webLink: "",
-  // },
-  // {
-  //   id: 11,
-  //   name: "Advanced counceling associates",
-  //   desc: "",
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "",
-  //   webLink: "",
-  // },
-  // {
-  //   id: 12,
-  //   name: "Advanced counceling associates",
-  //   desc: "",
-  //   imageSrc: "",
-  //   imageAlt: "",
-  //   gitLink: "",
-  //   webLink: "",
-  // },
+  {
+    id: 8,
+    name: "React Jobs",
+    desc: "Created a React Jobs application with React.js and Tailwind CSS, simulating a modern job board. Implemented job listings, category-based filtering, and responsive design to ensure a smooth user experience. This project strengthened practical React skills, focusing on props, state, and reusable components.",
+    imageSrc: "react-jobs",
+    imageAlt: "React Jobs",
+    darkTheme: true,
+    gitLink: "https://github.com/UnaizaZafar/ReactJobs.git",
+    webLink: "https://react-jobs-coral.vercel.app/",
+  },
+  {
+    id: 9,
+    name: "React Dynamic Table",
+    desc: "Built a feature-rich React Dynamic Table component designed for reusability across multiple applications. Implemented functionalities like column sorting, filtering, pagination, and responsive design. This project demonstrated component reusability, modular design, and clean state management in React.",
+    imageSrc: "dynamic-table",
+    imageAlt: "React Dynamic Table",
+    darkTheme: true,
+    gitLink:
+      "https://github.com/UnaizaZafar/Dynamic-React-Table-A-Feature-Rich-Reusable-Component.git",
+    webLink:
+      "https://dynamic-react-table-a-feature-rich-reusable-component.vercel.app/",
+  },
+  {
+    id: 10,
+    name: "ConcertRx",
+    desc: "Developed ConcertRx, an event and concert booking platform using Next.js. Implemented clean UI layouts, routing, and responsive design. This project highlighted the ability to create engaging front-end experiences with a scalable code structure.",
+    imageSrc: "concertrx",
+    imageAlt: "ConcertRx",
+    darkTheme: true,
+    gitLink: "https://github.com/UnaizaZafar/concertRx-next.git",
+    // webLink: "",
+  },
+  {
+    id: 11,
+    name: "Repair Management System",
+    desc: "Designed and developed a Repair Management System using Next.js, enabling users to create, track, and manage repair requests efficiently. Implemented task tracking, intuitive UI components, and basic CRUD functionality, showcasing the ability to build practical, real-world applications with structured workflows.",
+    imageSrc: "rms",
+    imageAlt: "Repair Management System",
+    darkTheme: true,
+    gitLink: "https://github.com/UnaizaZafar/next-rms.git",
+    webLink: "https://next-rms-six.vercel.app/analytics",
+  },
+  {
+    id: 12,
+    name: "Calculator",
+    desc: "Developed a fully functional calculator using HTML, CSS, and JavaScript as an introductory project during internship. Focused on understanding DOM manipulation, button event handling, and building a clean, responsive UI. This project helped solidify JavaScript fundamentals and problem-solving skills.",
+    imageSrc: "calc",
+    imageAlt: "Calculator",
+    gitLink: "https://github.com/UnaizaZafar/calculator-html.git",
+    webLink: "https://calculator-html-gilt.vercel.app/",
+  },
 ];
