@@ -104,3 +104,14 @@ body {
     transform: translateY(0%);
   }
 }
+.animate-infinite-scroll {
+  animation: infinite-scroll 10s linear infinite;
+}
+@keyframes infinite-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-100%);
+  }
+}
