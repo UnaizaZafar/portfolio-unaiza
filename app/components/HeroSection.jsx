@@ -8,17 +8,17 @@ const HeroSection = () => {
     TextAnimations({ wordAnimation: wordsRef, LineAnimation: lineRef });
 
     return (
-        <section id="hero" className="h-screen flex flex-col gap-6 items-center justify-center px-6">
+        <section id="hero" className="h-screen flex flex-col gap-6 items-center justify-center px-6 py-21 bg-primary">
             <h1
                 ref={wordsRef}
-                className="font-gamilia text-6xl md:text-9xl 2xl:text-[160px] font-medium xl:leading-32 text-center text-primary w-full xl:max-w-3/5 "
+                className="font-gamilia text-6xl md:text-9xl 2xl:text-[150px] font-medium xl:leading-30 text-center text-neutral-50 w-full xl:max-w-4/5 "
             >
                 Design meets development in my little corner of the web
             </h1>
 
             <p
                 ref={(el) => (lineRef.current[0] = el)}
-                className="text-xl font-cobe opacity-0"
+                className="text-xl font-cobe opacity-0 text-neutral-200"
             >
                 I create immersive digital experiences with code and creativity.
                 {/* I'm Unaiza, a frontend developer building elegant web experiences. */}
