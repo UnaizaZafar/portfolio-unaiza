@@ -35,7 +35,7 @@ const SkillSet = () => {
             className="flex flex-col gap-8 justify-center items-center py-16 max-w-screen-xl mx-auto"
         >
             <p className="font-gamilia text-6xl lg:text-7xl xl:text-8xl text-secondary">Tools That Shape My Work</p>
-            <div className="grid grid-cols-6 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {skills.map((skill, i) => {
                     return (
                         <div className=" rounded-lg py-10 px-6 flex justify-center items-center aspect-square bg-gradient-to-r from-neutral-600 to-cyan-950 overflow-hidden hover:scale-105 transition-all duration-300" key={i}>
