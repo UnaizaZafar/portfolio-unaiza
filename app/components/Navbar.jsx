@@ -11,7 +11,7 @@ const Navbar = () => {
     const pathname = usePathname();
     return (
         <>
-            <div className="bg-mauve w-max place-self-center rounded-full overflow-hidden text-secondary top-4 z-10 fixed hidden md:block">
+            <div className="bg-white/20 backdrop-blur-2xl shadow-2xl w-max place-self-center rounded-full overflow-hidden text-secondary top-4 z-10 fixed hidden md:block">
                 <div className=" flex justify-between items-center px-5">
                     <Link href={`/`}>
                         <Image src={"/images/uz-logo-2.webp"} width={70} height={70} alt="Logo" />

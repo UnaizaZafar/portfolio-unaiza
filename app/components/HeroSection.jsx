@@ -8,7 +8,7 @@ const HeroSection = () => {
     TextAnimations({ wordAnimation: wordsRef, LineAnimation: lineRef });
 
     return (
-        <section id="hero" className="h-screen flex flex-col gap-6 items-center justify-center px-6 py-21 bg-primary">
+        <section id="hero" className="h-screen flex flex-col gap-6 items-center justify-center px-6 py-21 bg-[#151520]">
             <h1
                 ref={wordsRef}
                 className="font-gamilia text-6xl md:text-9xl 2xl:text-[150px] font-medium xl:leading-30 text-center text-neutral-50 w-full xl:max-w-4/5 "
@@ -26,7 +26,7 @@ const HeroSection = () => {
             <Link
                 ref={(el) => (lineRef.current[1] = el)}
                 download={"UnaizaZ-Resume"}
-                href="/Unaiza Zafar Resume.pdf"
+                href="/Unaiza-Resume.pdf"
                 className="opacity-0 download-button font-cobe transition-all duration-300 ease-in-out"
             >
                 <div className="docs">
