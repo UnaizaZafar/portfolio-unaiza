@@ -3,19 +3,20 @@
   --font-gamilia: "gamilia", sans-serif;
   --font-cobe: "cobe", sans-serif;
   --color-primary: #22223b;
+  --color-primary2: #151520;
   --color-secondary: #f2e9e4;
   --color-deep-blue: #4a4e69;
   --color-mauve: #9a8c98;
   --color-taupe: #c9ada7;
 }
 body {
-  background: var(--background);
+  background: #151520;
   color: var(--foreground);
   scroll-behavior: smooth;
   cursor: default;
   backdrop-filter: blur(20px);
 }
-.main-container {
+/* .main-container {
   width: "100%";
   max-width: 1920px;
   margin-left: auto;
@@ -41,7 +42,7 @@ body {
   50% {
     background-position: 100% 50%;
   }
-}
+} */
 .download-button {
   width: max-content;
   position: relative;
