@@ -10,7 +10,7 @@
   --color-taupe: #c9ada7;
 }
 body {
-  background: #151520;
+  background: #161730;
   color: var(--foreground);
   scroll-behavior: smooth;
   cursor: default;

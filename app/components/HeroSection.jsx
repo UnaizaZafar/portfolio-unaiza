@@ -13,7 +13,7 @@ const HeroSection = () => {
             <div className="flex flex-col gap-6 justify-center ">
                 <h1
                     ref={wordsRef}
-                    className="font-gamilia text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl font-medium text-neutral-50 w-full text-left "
+                    className="font-gamilia text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl font-medium text-neutral-50 text-left "
                 >
                     Design meets <span className="text-[#45c2d7] ">development</span> in my little corner of the web
                 </h1>

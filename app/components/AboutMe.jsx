@@ -39,10 +39,10 @@ const AboutMe = () => {
     }, [])
     return (
         <div id="about"
-            className=" min-h-screen  flex justify-between items-center mx-auto px-6 py-8 xl:px-32 ">
-            <div className="flex flex-col gap-3 max-w-screen-xl mx-auto bg-black rounded-3xl py-12 px-10">
-                <p ref={fadeDownwardRef} className="font-gamilia text-6xl lg:text-7xl xl:text-[100px] text-white">Hi! I'm Unaiza Zafar</p>
-                <p ref={fadeUpwardRef} className="text-xl/loose lg:text-2xl/loose  text-white">
+            className=" min-h-screen  flex justify-between items-center mx-auto px-6 py-8 xl:px-32">
+            <div className="flex flex-col gap-3 max-w-screen-xl mx-auto rounded-3xl">
+                <p ref={fadeDownwardRef} className="font-gamilia text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-white">Hi! I'm Unaiza Zafar</p>
+                <p ref={fadeUpwardRef} className="text-lg text-white">
                     I’m a 23-year-old Frontend Developer with 1+ year of professional experience and over 12 completed projects. What started as curiosity quickly grew into a passion for crafting clean, responsive, and user-focused web experiences.
                     <br />
                     I build interfaces with React, Next.js, and Tailwind CSS, always aiming for code that’s structured, maintainable, and logical. I enjoy collaborating with teams, communicating ideas clearly, and using modern AI tools to speed up development and problem-solving.
