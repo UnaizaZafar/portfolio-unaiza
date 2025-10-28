@@ -32,9 +32,9 @@ const SkillSet = () => {
     // }, []);
     return (
         <div id="skill-set"
-            className="flex flex-col gap-8 justify-center items-center py-16 max-w-screen-xl mx-auto"
+            className="flex flex-col gap-8 justify-center items-center px-6 py-8 xl:px-32 mx-auto"
         >
-            <p className="font-gamilia text-6xl lg:text-7xl xl:text-8xl text-secondary">Tools That Shape My Work</p>
+            <p className="font-gamilia text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-white text-center">My Digital Paintbox</p>
             <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
                 {skills.map((skill, i) => {
                     return (
