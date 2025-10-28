@@ -17,7 +17,7 @@ const Portfolio = () => {
     };
     return (
         <div id="portfolio" className=" min-h-screen  flex flex-col gap-6 items-center mx-auto px-6 py-8 max-w-screen-xl ">
-            <p className="font-gamilia text-6xl lg:text-7xl xl:text-[100px] text-secondary ">
+            <p className="font-gamilia text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-white ">
                 Portfolio
             </p>
             <div className="relative w-full">
