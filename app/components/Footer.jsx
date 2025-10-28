@@ -14,8 +14,8 @@ const Footer = () => {
           ))}
         </div>
 
-        {/* Github */}
         <div className="text-white flex gap-6 justify-center">
+          {/* Github */}
           <Link href={"https://github.com/UnaizaZafar/"} target="_blank" className="text-white hover:text-white/90 transition-all duration-300">
             {githubIcon}
           </Link>

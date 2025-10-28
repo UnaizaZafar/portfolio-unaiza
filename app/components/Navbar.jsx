@@ -62,7 +62,7 @@ const HamburgerMenu = () => {
     }, []);
 
     return (
-        <div className="bg-mauve w-full md:w-max place-self-center md:rounded-full overflow-hidden text-secondary bottom-0 fixed z-10 md:hidden block max-md:py-2">
+        <div className="bg-gradient-to-r from-[#6366F1]/70 to-[#14B8A6]/70 backdrop-blur-2xl shadow-inner md:rounded-full overflow-hidden text-secondary bottom-0 fixed inset-x-0 z-[999] block md:hidden max-md:py-2">
             <div className="flex  w-full justify-between items-center px-3">
                 {menu.map((item) => (
                     <Link
