@@ -71,7 +71,7 @@ const HeroSection = () => {
                     </div>
                 </Link>
             </div>
-            <Image src={"/images/dev-girl.png"} alt="Developer girl illustration" width={0} height={0} unoptimized className="w-96 lg:w-2/5"
+            <Image src={"/images/dev-girl.webp"} alt="Developer girl illustration" width={0} height={0} unoptimized className="w-96 lg:w-2/5"
             />
         </section>
     )
