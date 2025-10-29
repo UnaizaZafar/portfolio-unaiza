@@ -118,3 +118,11 @@ body {
     transform: translateX(-100%);
   }
 }
+/* .swiper-wrapper {
+  display: flex;
+  align-items: stretch; 
+
+.swiper-slide {
+  display: flex;
+  height: auto !important;
+} */

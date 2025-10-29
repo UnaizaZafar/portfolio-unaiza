@@ -4,12 +4,12 @@ import Link from "next/link"
 const WorkCards = ({ item }) => {
 
     return (
-        <div className="lg:relative rounded-2xl overflow-hidden max-lg:border border-neutral-300">
+        <div className="lg:relative rounded-2xl overflow-hidden flex flex-col h-full">
             <Image className="shrink-0 aspect-[5/2.5] lg:aspect-[5/3.5] w-full object-cover object-top"
-                width={0} height={0} unoptimized src={`/images/projects/${item.imageSrc}.webp`}
+                width={0} height={0} priority unoptimized src={`/images/projects/${item.imageSrc}.webp`}
                 alt={item.imageAlt}
             />
-            <div className={`flex flex-col gap-3 lg:absolute ${item.darkTheme ? "lg:text-black" : "lg:text-white text-black"} bottom-0 p-5 backdrop-blur-2xl bg-blend-darken`}>
+            <div className={`flex flex-col flex-grow place-content-center gap-3 lg:absolute bg-purple-950 text-white bottom-0 p-5 backdrop-blur-2xl bg-blend-darken`}>
                 <p className="font-gamilia text-xl lg:text-2xl font-semibold tracking-wider">{item.name}</p>
                 <p className="text-base lg:text-lg">
                     {item.desc}

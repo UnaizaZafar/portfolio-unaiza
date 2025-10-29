@@ -16,30 +16,30 @@ const Portfolio = () => {
         setIsEnd(swiper.isEnd);
     };
     return (
-        <div id="portfolio" className=" min-h-screen  flex flex-col gap-6 items-center mx-auto px-6 py-8 max-w-screen-xl ">
+        <div id="portfolio" className="flex flex-col gap-6 items-center mx-auto px-6 py-8 max-w-screen-xl ">
             <p className="font-gamilia text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-white ">
                 Portfolio
             </p>
-            <div className="relative w-full">
+            <div className="relative w-full swiper-container">
                 {/* Previous Button */}
                 <button
-                    className={`cursor-pointer hover:bg-white hover:text-black max-lg:hidden  swiper-button-prev rounded-full lg:flex items-center absolute top-1/2 z-[2] -mt-8 ${isBeginning
+                    className={`cursor-pointer bg-gradient-to-r from-[#6195d8]/70 to-[#45c2d7]/70 text-white max-lg:hidden  swiper-button-prev rounded-full lg:flex items-center absolute top-1/2 z-[2] -mt-8 ${isBeginning
                         ? "bg-white/10 opacity-50 grayscale"
                         : "opacity-100"
-                        } transition-all duration-500 ease-in-out shadow-custom-1 max-md:size-8 md:p-2 xl:p-3 md:size-14 text-primary -ml-14`}
+                        } transition-all duration-500 ease-in-out shadow-custom-1 max-md:size-8 md:p-2 xl:p-3 md:size-14 text-primary -ml-16`}
                 >
                     {arrowLeft}
                 </button>
 
                 {/* Next Button */}
                 <button
-                    className={`cursor-pointer hover:bg-white hover:text-black max-lg:hidden swiper-button-next rounded-full lg:flex items-center absolute right-0 top-1/2 z-[2] -mt-8 ${isEnd ? "bg-white/10 opacity-50 grayscale" : "opacity-100"
-                        } transition-all duration-500 ease-in-out  max-md:size-8 md:p-2 xl:p-3 md:size-14 shadow-custom-1 rotate-180 -mr-14`}
+                    className={`cursor-pointer bg-gradient-to-r from-[#6195d8]/70 to-[#45c2d7]/70 text-white max-lg:hidden swiper-button-next rounded-full lg:flex items-center absolute right-0 top-1/2 z-[2] -mt-8 ${isEnd ? "bg-white/10 opacity-50 grayscale" : "opacity-100"
+                        } transition-all duration-500 ease-in-out  max-md:size-8 md:p-2 xl:p-3 md:size-14 shadow-custom-1 rotate-180 -mr-16`}
                 >
                     {arrowLeft}
                 </button>
 
-                <div className="swiper-container max-xl:px-6">
+                <div className="swiper-slide max-xl:px-6">
                     <Swiper
                         modules={[Navigation, Autoplay, Pagination]}
                         breakpoints={{
@@ -66,10 +66,11 @@ const Portfolio = () => {
                         onSlideChange={handleSwiperChange}
                         onSwiper={handleSwiperChange}
                         autoplay
-                        autoHeight={false}
+                    // autoHeight={true}
                     >
                         {projects.map((item) => (
-                            <SwiperSlide key={item.id}>
+                            <SwiperSlide key={item.id} className="flex items-stretch !h-auto"
+                            >
                                 <WorkCards item={item} key={item.id} />
                             </SwiperSlide>
                         ))}
