@@ -42,8 +42,8 @@ const HeroSection = () => {
             ref={(el) => (lineRef.current[1] = el)}
             className="flex flex-wrap gap-4 opacity-0"
           >
-            <Button href="#work" variant="primary">
-              View my work
+            <Button href="#work-experience" variant="primary">
+              View Experience
             </Button>
             <Button href="/Unaiza-Resume.pdf" download="Unaiza-Resume.pdf" variant="ghost">
               Download CV

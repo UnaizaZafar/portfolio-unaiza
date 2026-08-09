@@ -58,55 +58,9 @@ export const menu = [
       </svg>
     ),
   },
+ 
   {
     id: 3,
-    name: "Work",
-    link: "#work",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={35}
-        height={35}
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="size-7"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
-        <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
-      </svg>
-    ),
-  },
-  {
-    id: 4,
-    name: "Projects",
-    link: "#portfolio",
-    icon: (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        width={35}
-        height={35}
-        viewBox="0 0 24 24"
-        fill="none"
-        stroke="currentColor"
-        strokeWidth={2}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        className="size-7"
-      >
-        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2zm-7 -7h.01m3.99 0h.01" />
-        <path d="M10 17a3.5 3.5 0 0 0 4 0" />
-      </svg>
-    ),
-  },
-  {
-    id: 5,
     name: "Skills",
     link: "#skill-set",
     icon: (
@@ -133,7 +87,7 @@ export const menu = [
     ),
   },
   {
-    id: 6,
+    id: 4,
     name: "Contact",
     link: "#contact",
     icon: (
@@ -161,100 +115,90 @@ export const experience = [
     key: 1,
     logo: "bxtrack-logo",
     companyName: "BX Track Solutions",
-    designation: "Full Stack Developer",
-    duration: "Sep 2025 – Present",
-    location: "Rawalpindi, Pakistan",
-    desc: "Project lead for 2 role-based portal dashboards, owning technical architecture and coordinating a 4–7 member team. Built full-stack features with Next.js API routes and Supabase, real-time data sync, Fabric.js canvas UI, and a scalable RBAC system.",
+    roles: [
+      {
+        key: 1,
+        designation: "Full Stack Developer",
+        duration: "Sep 2025 – Present",
+        location: "Rawalpindi, Pakistan",
+        title: "RBAC Portal Dashboards",
+        desc: "Leading development of two role-based portal dashboards as project lead, owning architecture, backend integration, and team coordination.",
+        tags: ["Next.js", "Supabase", "PostgreSQL", "Fabric.js", "RBAC"],
+        highlights: [
+          "Built real-time data sync with Supabase, replacing manual updates and improving dashboard accuracy.",
+          "Developed interactive canvas-based admin UI with Fabric.js for customizable data views.",
+          "Architected RBAC across multiple user roles for secure multi-tenant portal access.",
+        ],
+      },
+    ],
   },
   {
     key: 2,
     logo: "ag-logo",
     companyName: "AG InfoTech",
-    designation: "Front-end Developer",
-    duration: "Sep 2024 – Aug 2025",
-    location: "Islamabad, Pakistan · Hybrid",
-    desc: "Created 6+ projects across healthcare, SaaS, and business industries. Built and deployed full-stack applications with React.js, Next.js, and TypeScript using modular architecture, Agile delivery, and pixel-perfect UI implementation from Figma.",
+    roles: [
+      {
+        key: 2,
+        designation: "Front-end Developer",
+        duration: "Sep 2024 – Aug 2025",
+        location: "Islamabad, Pakistan · Hybrid",
+        title: "Healthcare & SaaS Client Applications",
+        desc: "Delivered 6+ responsive, accessible web applications for healthcare, SaaS, and business clients with reusable modular architecture.",
+        tags: ["React", "Next.js", "TypeScript", "REST APIs"],
+        highlights: [
+          "Integrated RESTful APIs for real-time data sync and smoother client-server consistency.",
+          "Recreated pixel-perfect UIs from Figma or static references when design files were unavailable.",
+          "Improved sprint delivery through Agile practices and Jira-based workflow management.",
+        ],
+      },
+      {
+        key: 3,
+        designation: "Front-end Intern",
+        duration: "Jun 2024 – Aug 2024",
+        location: "Remote",
+        title: "Interactive Product Interfaces",
+        desc: "Built dynamic product interfaces during internship, including job portals, management systems, and reusable table components.",
+        tags: ["React", "Next.js", "GSAP", "Framer Motion"],
+        highlights: [
+          "Enhanced user engagement with advanced animations using Framer Motion and GSAP.",
+          "Used AI-assisted tools to prototype features and debug faster during delivery.",
+          "Earned a full-time offer immediately after the internship.",
+        ],
+      },
+    ],
   },
   {
     key: 3,
-    logo: "ag-logo",
-    companyName: "AG InfoTech",
-    designation: "Front-end Intern",
-    duration: "Jun 2024 – Aug 2024",
-    location: "Remote",
-    desc: "Completed 6 hands-on projects including dynamic tables, job portals, and management systems. Recognized for strong performance and offered a full-time role. Applied React.js, Next.js, GSAP, Framer Motion, and structured Git workflows.",
+    logo: "ptcl",
+    companyName: "PTCL (Pakistan Telecommunication Company Ltd.)",
+    roles: [
+      {
+        key: 4,
+        designation: "Network & Systems Intern",
+        duration: "Aug 2023 – Sep 2023",
+        location: "Rawalpindi, Pakistan · Onsite",
+        title: "Enterprise CRM & Operations Support",
+        desc: "Supported CRM and tracking portal operations for 500+ employees while improving internal workflow clarity.",
+        tags: ["CRM", "Documentation", "Operations"],
+        highlights: [
+          "Contributed to smoother internal task completion across enterprise systems.",
+          "Documented processes with engineers to improve reporting clarity.",
+        ],
+      },
+    ],
   },
   {
     key: 4,
-    logo: "ptcl",
-    companyName: "PTCL (Pakistan Telecommunication Company Ltd.)",
-    designation: "Network & Systems Intern",
-    duration: "Aug 2023 – Sep 2023",
-    location: "Rawalpindi, Pakistan · Onsite",
-    desc: "Assisted in CRM and tracking portal management used by 500+ employees. Documented processes with engineers, improving reporting clarity and reducing escalation time by 10%.",
-  },
-  {
-    key: 5,
     logo: "pims",
     companyName: "Pakistan Institute of Medical Sciences",
-    designation: "Graphic Design Intern",
-    duration: "Sep 2022",
-    location: "Islamabad, Pakistan · Onsite",
-    desc: "Designed 5+ UI/UX layouts using Canva, Illustrator, Photoshop, and Figma, improving content quality and increasing adoption of digital templates within teams.",
-  },
-];
-
-export const work = [
-  {
-    id: 1,
-    featured: true,
-    title: "RBAC Portal Dashboards",
-    company: "BX Track Solutions",
-    period: "Sep 2025 – Present",
-    tags: ["Next.js", "Supabase", "PostgreSQL", "Fabric.js", "RBAC"],
-    desc: "Leading development of two role-based portal dashboards as project lead, owning architecture, backend integration, and team coordination.",
-    highlights: [
-      "Built real-time data sync with Supabase, replacing manual updates and improving dashboard accuracy.",
-      "Developed interactive canvas-based admin UI with Fabric.js for customizable data views.",
-      "Architected RBAC across multiple user roles for secure multi-tenant portal access.",
-    ],
-  },
-  {
-    id: 2,
-    title: "Healthcare & SaaS Client Applications",
-    company: "AG InfoTech",
-    period: "Sep 2024 – Aug 2025",
-    tags: ["React", "Next.js", "TypeScript", "REST APIs"],
-    desc: "Delivered 6+ responsive, accessible web applications for healthcare, SaaS, and business clients with reusable modular architecture.",
-    highlights: [
-      "Integrated RESTful APIs for real-time data sync and smoother client-server consistency.",
-      "Recreated pixel-perfect UIs from Figma or static references when design files were unavailable.",
-      "Improved sprint delivery through Agile practices and Jira-based workflow management.",
-    ],
-  },
-  {
-    id: 3,
-    title: "Interactive Product Interfaces",
-    company: "AG InfoTech",
-    period: "Jun 2024 – Aug 2024",
-    tags: ["React", "Next.js", "GSAP", "Framer Motion"],
-    desc: "Built dynamic product interfaces during internship, including job portals, management systems, and reusable table components.",
-    highlights: [
-      "Enhanced user engagement with advanced animations using Framer Motion and GSAP.",
-      "Used AI-assisted tools to prototype features and debug faster during delivery.",
-      "Earned a full-time offer immediately after the internship.",
-    ],
-  },
-  {
-    id: 4,
-    title: "Enterprise CRM & Operations Support",
-    company: "PTCL",
-    period: "Aug 2023 – Sep 2023",
-    tags: ["CRM", "Documentation", "Operations"],
-    desc: "Supported CRM and tracking portal operations for 500+ employees while improving internal workflow clarity.",
-    highlights: [
-      "Contributed to smoother internal task completion across enterprise systems.",
-      "Documented processes with engineers to improve reporting clarity.",
+    roles: [
+      {
+        key: 5,
+        designation: "Graphic Design Intern",
+        duration: "Sep 2022",
+        location: "Islamabad, Pakistan · Onsite",
+        desc: "Designed 5+ UI/UX layouts using Canva, Illustrator, Photoshop, and Figma, improving content quality and increasing adoption of digital templates within teams.",
+      },
     ],
   },
 ];

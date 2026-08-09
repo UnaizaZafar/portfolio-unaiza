@@ -6,34 +6,42 @@ import Link from "next/link";
 import { menu } from "../utils/data";
 import Button from "./ui/Button";
 
+const NAV_OFFSET = 120;
+
+const getSectionTop = (element) =>
+  element.getBoundingClientRect().top + window.scrollY;
+
 const Navbar = () => {
   const [active, setActive] = useState("hero");
   const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
-    const handleScroll = () => setScrolled(window.scrollY > 50);
-    window.addEventListener("scroll", handleScroll, { passive: true });
-    handleScroll();
-    return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+    const sectionIds = [...new Set(menu.map((item) => item.link.replace("#", "")))];
 
-  useEffect(() => {
-    const sectionIds = ["hero", ...menu.map((item) => item.link.replace("#", ""))];
-    const observers = sectionIds.map((id) => {
-      const el = document.getElementById(id);
-      if (!el) return null;
+    const updateActiveSection = () => {
+      setScrolled(window.scrollY > 50);
 
-      const observer = new IntersectionObserver(
-        ([entry]) => {
-          if (entry.isIntersecting) setActive(id);
-        },
-        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
-      );
-      observer.observe(el);
-      return observer;
-    });
+      const scrollPosition = window.scrollY + NAV_OFFSET;
+      let currentSection = sectionIds[0] ?? "hero";
 
-    return () => observers.forEach((o) => o?.disconnect());
+      for (const id of sectionIds) {
+        const element = document.getElementById(id);
+        if (element && getSectionTop(element) <= scrollPosition) {
+          currentSection = id;
+        }
+      }
+
+      setActive(currentSection);
+    };
+
+    updateActiveSection();
+    window.addEventListener("scroll", updateActiveSection, { passive: true });
+    window.addEventListener("resize", updateActiveSection, { passive: true });
+
+    return () => {
+      window.removeEventListener("scroll", updateActiveSection);
+      window.removeEventListener("resize", updateActiveSection);
+    };
   }, []);
 
   return (
