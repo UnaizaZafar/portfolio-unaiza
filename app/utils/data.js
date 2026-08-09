@@ -1,5 +1,18 @@
 export const menu = [
   {
+    id: 0,
+    name: "Home",
+    link: "#hero",
+    icon: (
+      <svg xmlns="http://www.w3.org/2000/svg" width={35} height={35} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" className="size-7">
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M5 12l-2 0l9 -9l9 9l-2 0" />
+        <path d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7" />
+        <path d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6" />
+      </svg>
+    ),
+  },
+  {
     id: 1,
     name: "About Me",
     link: "#about",
@@ -22,56 +35,79 @@ export const menu = [
       </svg>
     ),
   },
-  // {
-  //   id: 2,
-  //   name: "Experience",
-  //   link: "#work-experience",
-  //   icon: (
-  //     <svg
-  //       xmlns="http://www.w3.org/2000/svg"
-  //       width={35}
-  //       height={35}
-  //       viewBox="0 0 24 24"
-  //       fill="none"
-  //       stroke="currentColor"
-  //       strokeWidth={2}
-  //       strokeLinecap="round"
-  //       strokeLinejoin="round"
-  //       className="icon icon-tabler icons-tabler-outline icon-tabler-briefcase-2 size-7"
-  //     >
-  //       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  //       <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
-  //       <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
-  //     </svg>
-  //   ),
-  // },
-  // {
-  //   id: 3,
-  //   name: "Portfolio ",
-  //   link: "#portfolio",
-  //   icon: (
-  //     <svg
-  //       xmlns="http://www.w3.org/2000/svg"
-  //       width={35}
-  //       height={35}
-  //       viewBox="0 0 24 24"
-  //       fill="none"
-  //       stroke="currentColor"
-  //       strokeWidth={2}
-  //       strokeLinecap="round"
-  //       strokeLinejoin="round"
-  //       className="icon icon-tabler icons-tabler-outline icon-tabler-file-smile size-7"
-  //     >
-  //       <path stroke="none" d="M0 0h24v24H0z" fill="none" />
-  //       <path d="M14 3v4a1 1 0 0 0 1 1h4" />
-  //       <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2zm-7 -7h.01m3.99 0h.01" />
-  //       <path d="M10 17a3.5 3.5 0 0 0 4 0" />
-  //     </svg>
-  //   ),
-  // },
+  {
+    id: 2,
+    name: "Experience",
+    link: "#work-experience",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={35}
+        height={35}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="icon icon-tabler icons-tabler-outline icon-tabler-briefcase-2 size-7"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
+        <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+      </svg>
+    ),
+  },
+  {
+    id: 3,
+    name: "Work",
+    link: "#work",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={35}
+        height={35}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="size-7"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M3 9a2 2 0 0 1 2 -2h14a2 2 0 0 1 2 2v9a2 2 0 0 1 -2 2h-14a2 2 0 0 1 -2 -2v-9z" />
+        <path d="M8 7v-2a2 2 0 0 1 2 -2h4a2 2 0 0 1 2 2v2" />
+      </svg>
+    ),
+  },
   {
     id: 4,
-    name: "SkillSet",
+    name: "Projects",
+    link: "#portfolio",
+    icon: (
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width={35}
+        height={35}
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        strokeWidth={2}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        className="size-7"
+      >
+        <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+        <path d="M14 3v4a1 1 0 0 0 1 1h4" />
+        <path d="M17 21h-10a2 2 0 0 1 -2 -2v-14a2 2 0 0 1 2 -2h7l5 5v11a2 2 0 0 1 -2 2zm-7 -7h.01m3.99 0h.01" />
+        <path d="M10 17a3.5 3.5 0 0 0 4 0" />
+      </svg>
+    ),
+  },
+  {
+    id: 5,
+    name: "Skills",
     link: "#skill-set",
     icon: (
       <svg
@@ -84,7 +120,7 @@ export const menu = [
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="icon icon-tabler icons-tabler-outline icon-tabler-tools size-7"
+        className="size-7"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M3 21h4l13 -13a1.5 1.5 0 0 0 -4 -4l-13 13v4" />
@@ -97,7 +133,7 @@ export const menu = [
     ),
   },
   {
-    id: 5,
+    id: 6,
     name: "Contact",
     link: "#contact",
     icon: (
@@ -111,7 +147,7 @@ export const menu = [
         strokeWidth={2}
         strokeLinecap="round"
         strokeLinejoin="round"
-        className="icon icon-tabler icons-tabler-outline icon-tabler-phone size-7"
+        className="size-7"
       >
         <path stroke="none" d="M0 0h24v24H0z" fill="none" />
         <path d="M5 4h4l2 5l-2.5 1.5a11 11 0 0 0 5 5l1.5 -2.5l5 2v4a2 2 0 0 1 -2 2a16 16 0 0 1 -15 -15a2 2 0 0 1 2 -2" />
@@ -123,49 +159,110 @@ export const menu = [
 export const experience = [
   {
     key: 1,
-    logo: "pims",
-    companyName: "Pakistan Institute of Medical Sciences",
-    designation: "Design Intern",
-    duration: "Sep 2022",
-    desc: "Trained in the basics of graphic and web design, made things that looked good and worked well. Helped PIMS enhance their digital presence with engaging visuals and content. Basically, gave their site a little more personality.",
+    logo: "bxtrack-logo",
+    companyName: "BX Track Solutions",
+    designation: "Full Stack Developer",
+    duration: "Sep 2025 – Present",
+    location: "Rawalpindi, Pakistan",
+    desc: "Project lead for 2 role-based portal dashboards, owning technical architecture and coordinating a 4–7 member team. Built full-stack features with Next.js API routes and Supabase, real-time data sync, Fabric.js canvas UI, and a scalable RBAC system.",
   },
   {
     key: 2,
-    logo: "ptcl",
-    companyName: "PTCL (Pakistan Telecommunication Company Ltd.)",
-    designation: "Technical Intern",
-    duration: "Aug – Sep 2023",
-    desc: "Peeked behind the scenes of one of Pakistan’s largest telcos. Explored network management systems, CRM platforms, and fiber optic setups. Learned how big infrastructure runs and how everything connects.",
+    logo: "ag-logo",
+    companyName: "AG InfoTech",
+    designation: "Front-end Developer",
+    duration: "Sep 2024 – Aug 2025",
+    location: "Islamabad, Pakistan · Hybrid",
+    desc: "Created 6+ projects across healthcare, SaaS, and business industries. Built and deployed full-stack applications with React.js, Next.js, and TypeScript using modular architecture, Agile delivery, and pixel-perfect UI implementation from Figma.",
   },
   {
     key: 3,
     logo: "ag-logo",
     companyName: "AG InfoTech",
-    designation: "Front-End Intern",
+    designation: "Front-end Intern",
     duration: "Jun 2024 – Aug 2024",
-    desc: "Dove into the frontend world with real projects. Learned how to turn HTML, CSS, JS, and React code into actual user experiences. This was where theory met reality and I was hooked.",
+    location: "Remote",
+    desc: "Completed 6 hands-on projects including dynamic tables, job portals, and management systems. Recognized for strong performance and offered a full-time role. Applied React.js, Next.js, GSAP, Framer Motion, and structured Git workflows.",
   },
-
   {
     key: 4,
-    logo: "ag-logo",
-    companyName: "AG InfoTech",
-    designation: "Junior Front-end Developer",
-    duration: "September,2024-August,2025",
-    desc: "Started as an intern, earned my spot on the team ; now building sleek, responsive UIs with React, JavaScript, and Next.js. I collaborate with designers and backend devs to craft interfaces that feel right. Clean code, great UX, and pixel precision? That’s my jam.",
+    logo: "ptcl",
+    companyName: "PTCL (Pakistan Telecommunication Company Ltd.)",
+    designation: "Network & Systems Intern",
+    duration: "Aug 2023 – Sep 2023",
+    location: "Rawalpindi, Pakistan · Onsite",
+    desc: "Assisted in CRM and tracking portal management used by 500+ employees. Documented processes with engineers, improving reporting clarity and reducing escalation time by 10%.",
   },
-  // {
-  //     logo:"",
-  //     companyName:"",
-  //     designation:"",
-  //     duration:"",
-  //     desc:"",
-  // },
+  {
+    key: 5,
+    logo: "pims",
+    companyName: "Pakistan Institute of Medical Sciences",
+    designation: "Graphic Design Intern",
+    duration: "Sep 2022",
+    location: "Islamabad, Pakistan · Onsite",
+    desc: "Designed 5+ UI/UX layouts using Canva, Illustrator, Photoshop, and Figma, improving content quality and increasing adoption of digital templates within teams.",
+  },
+];
+
+export const work = [
+  {
+    id: 1,
+    featured: true,
+    title: "RBAC Portal Dashboards",
+    company: "BX Track Solutions",
+    period: "Sep 2025 – Present",
+    tags: ["Next.js", "Supabase", "PostgreSQL", "Fabric.js", "RBAC"],
+    desc: "Leading development of two role-based portal dashboards as project lead, owning architecture, backend integration, and team coordination.",
+    highlights: [
+      "Built real-time data sync with Supabase, replacing manual updates and improving dashboard accuracy.",
+      "Developed interactive canvas-based admin UI with Fabric.js for customizable data views.",
+      "Architected RBAC across multiple user roles for secure multi-tenant portal access.",
+    ],
+  },
+  {
+    id: 2,
+    title: "Healthcare & SaaS Client Applications",
+    company: "AG InfoTech",
+    period: "Sep 2024 – Aug 2025",
+    tags: ["React", "Next.js", "TypeScript", "REST APIs"],
+    desc: "Delivered 6+ responsive, accessible web applications for healthcare, SaaS, and business clients with reusable modular architecture.",
+    highlights: [
+      "Integrated RESTful APIs for real-time data sync and smoother client-server consistency.",
+      "Recreated pixel-perfect UIs from Figma or static references when design files were unavailable.",
+      "Improved sprint delivery through Agile practices and Jira-based workflow management.",
+    ],
+  },
+  {
+    id: 3,
+    title: "Interactive Product Interfaces",
+    company: "AG InfoTech",
+    period: "Jun 2024 – Aug 2024",
+    tags: ["React", "Next.js", "GSAP", "Framer Motion"],
+    desc: "Built dynamic product interfaces during internship, including job portals, management systems, and reusable table components.",
+    highlights: [
+      "Enhanced user engagement with advanced animations using Framer Motion and GSAP.",
+      "Used AI-assisted tools to prototype features and debug faster during delivery.",
+      "Earned a full-time offer immediately after the internship.",
+    ],
+  },
+  {
+    id: 4,
+    title: "Enterprise CRM & Operations Support",
+    company: "PTCL",
+    period: "Aug 2023 – Sep 2023",
+    tags: ["CRM", "Documentation", "Operations"],
+    desc: "Supported CRM and tracking portal operations for 500+ employees while improving internal workflow clarity.",
+    highlights: [
+      "Contributed to smoother internal task completion across enterprise systems.",
+      "Documented processes with engineers to improve reporting clarity.",
+    ],
+  },
 ];
 export const projects = [
   {
     id: 1,
     name: "Advanced counceling associates",
+    tags: ["Next.js", "Tailwind CSS", "Framer Motion"],
     desc: (
       <>
         Contributed as a{" "}
@@ -187,6 +284,7 @@ export const projects = [
   {
     id: 2,
     name: "Samina Khalid Ghurki",
+    tags: ["Next.js", "Tailwind CSS"],
     desc: (
       <>
         Worked as a{" "}
@@ -208,6 +306,7 @@ export const projects = [
   {
     id: 3,
     name: "AG InfoTech - Cooperate Website",
+    tags: ["Next.js", "Tailwind CSS", "UI Design"],
     desc: (
       <>
         As a{" "}
@@ -230,6 +329,7 @@ export const projects = [
   {
     id: 4,
     name: "Keller Immigration Law",
+    tags: ["Next.js", "Tailwind CSS"],
     desc: (
       <>
         Contributed as a{" "}
@@ -250,6 +350,7 @@ export const projects = [
   {
     id: 5,
     name: "Paul Mankin Law",
+    tags: ["Next.js", "Tailwind CSS", "CMS"],
     desc: (
       <>
         As a{" "}
@@ -271,6 +372,7 @@ export const projects = [
   {
     id: 6,
     name: "ASH Portal",
+    tags: ["Next.js", "TypeScript", "API"],
     desc: (
       <>
         Served as a{" "}
@@ -291,6 +393,7 @@ export const projects = [
   {
     id: 7,
     name: "SNH Consultants",
+    tags: ["QA", "Testing"],
     desc: (
       <>
         Worked as a{" "}
@@ -311,6 +414,7 @@ export const projects = [
   {
     id: 8,
     name: "React Jobs",
+    tags: ["React", "Tailwind CSS"],
     desc: "Created a React Jobs application with React.js and Tailwind CSS, simulating a modern job board. Implemented job listings, category-based filtering, and responsive design to ensure a smooth user experience. This project strengthened practical React skills, focusing on props, state, and reusable components.",
     imageSrc: "react-jobs",
     imageAlt: "React Jobs",
@@ -321,6 +425,7 @@ export const projects = [
   {
     id: 9,
     name: "React Dynamic Table",
+    tags: ["React", "Components"],
     desc: "Built a feature-rich React Dynamic Table component designed for reusability across multiple applications. Implemented functionalities like column sorting, filtering, pagination, and responsive design. This project demonstrated component reusability, modular design, and clean state management in React.",
     imageSrc: "dynamic-table",
     imageAlt: "React Dynamic Table",
@@ -333,6 +438,7 @@ export const projects = [
   {
     id: 10,
     name: "ConcertRx",
+    tags: ["Next.js", "Booking"],
     desc: "Developed ConcertRx, an event and concert booking platform using Next.js. Implemented clean UI layouts, routing, and responsive design. This project highlighted the ability to create engaging front-end experiences with a scalable code structure.",
     imageSrc: "concertrx",
     imageAlt: "ConcertRx",
@@ -343,6 +449,7 @@ export const projects = [
   {
     id: 11,
     name: "Repair Management System",
+    tags: ["Next.js", "CRUD"],
     desc: "Designed and developed a Repair Management System using Next.js, enabling users to create, track, and manage repair requests efficiently. Implemented task tracking, intuitive UI components, and basic CRUD functionality, showcasing the ability to build practical, real-world applications with structured workflows.",
     imageSrc: "rms",
     imageAlt: "Repair Management System",
@@ -353,6 +460,7 @@ export const projects = [
   {
     id: 12,
     name: "Calculator",
+    tags: ["JavaScript", "HTML/CSS"],
     desc: "Developed a fully functional calculator using HTML, CSS, and JavaScript as an introductory project during internship. Focused on understanding DOM manipulation, button event handling, and building a clean, responsive UI. This project helped solidify JavaScript fundamentals and problem-solving skills.",
     imageSrc: "calc",
     imageAlt: "Calculator",
@@ -802,4 +910,42 @@ export const skills = [
   // { name: "trello", icon: "" },
   // { name: "github-copilot", icon: "" },
   // { name: "chatgpt", icon: "" },
+];
+
+const byNames = (...names) => skills.filter((s) => names.includes(s.name));
+
+export const skillCategories = [
+  {
+    name: "Frontend",
+    type: "icons",
+    skills: byNames("html", "css", "javascript", "typescript", "react", "nextjs", "redux", "tailwind", "framer-motion"),
+  },
+  {
+    name: "Backend & API",
+    type: "text",
+    items: [
+      "Supabase (Auth, Realtime, PostgreSQL)",
+      "Next.js API Routes & Server Actions",
+      "Prisma ORM",
+      "RESTful APIs (Fetch, Axios)",
+      "RBAC & Portal Architecture",
+      "SSR & Server-side Rendering",
+    ],
+  },
+  {
+    name: "Tools & Platforms",
+    type: "mixed",
+    skills: byNames("github", "nodejs", "vercel", "azure", "jira"),
+    items: ["VS Code", "Cursor", "Postman", "AWS S3", "ClickUp", "Agile / Scrum"],
+  },
+  {
+    name: "AI & Productivity",
+    type: "text",
+    items: ["GitHub Copilot", "ChatGPT", "Cursor", "Claude", "AI-assisted testing & documentation"],
+  },
+  {
+    name: "Design",
+    type: "icons",
+    skills: byNames("figma", "canva", "adobe-illustrator", "photoshop"),
+  },
 ];

@@ -1,9 +1,9 @@
-const Tags = ({text}) => {
-    return (
-        <div className="px-7 py-4 bg-blue-800 shadow-inner shadow-blue-500 drop-shadow-md/50 rounded-2xl font-medium text-white text-xl">
-            {text}
-        </div>
-    )
-}
+const Tags = ({ text }) => {
+  return (
+    <span className="inline-block rounded-md bg-accent/10 px-2.5 py-1 font-mono text-xs text-accent border border-accent/20">
+      {text}
+    </span>
+  );
+};
 
-export default Tags
+export default Tags;

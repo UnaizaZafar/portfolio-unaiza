@@ -1,84 +1,107 @@
-'use client'
-import Image from "next/image"
-import { useState, useEffect } from "react"
-import Link from "next/link"
-import { usePathname } from "next/navigation"
-import { menu } from "../utils/data"
-import ScrollTrigger from "gsap/ScrollTrigger"
-import gsap from "gsap"
-gsap.registerPlugin(ScrollTrigger)
+"use client";
+
+import { useEffect, useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { menu } from "../utils/data";
+import Button from "./ui/Button";
+
 const Navbar = () => {
-    const pathname = usePathname();
-    return (
-        <>
-            <div className="bg-gradient-to-r from-[#6366F1]/70 to-[#14B8A6]/70 backdrop-blur-2xl shadow-inner w-max place-self-center rounded-full overflow-hidden text-secondary top-4 z-10 fixed hidden md:block">
-                <div className=" flex justify-between items-center px-5">
-                    <Link href={`/`}>
-                        <Image src={"/images/uz-logo-2.webp"} width={55} height={55} alt="Logo" />
-                    </Link>
-                    <div className="flex gap-3 w-110 justify-between">
-                        {menu.map((item) => (
-                            <Link
-                                key={item.id}
-                                href={item.link}
-                                className={`group flex items-center gap-2 rounded-3xl py-1 px-3 transition-all duration-500 ease-in-out
-        ${pathname === item.link ? "bg-white text-deep-blue" : "hover:bg-white hover:text-deep-blue"}
-      `}
-                            >
-                                <div>{item.icon}</div>
+  const [active, setActive] = useState("hero");
+  const [scrolled, setScrolled] = useState(false);
 
-                                <p
-                                    className={` hidden sm:inline-block max-w-0 group-hover:max-w-[160px]  overflow-hidden whitespace-nowrap
-          transition-[max-width] duration-500 ease-in-out opacity-0 translate-x-[-10px] group-hover:opacity-100 group-hover:translate-x-0
-          text-lg font-medium
-        `}
-                                >
-                                    {item.name}
-                                </p>
-                            </Link>
-                        ))}
-                    </div>
+  useEffect(() => {
+    const handleScroll = () => setScrolled(window.scrollY > 50);
+    window.addEventListener("scroll", handleScroll, { passive: true });
+    handleScroll();
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
-                </div>
-            </div>
-            <HamburgerMenu />
-        </>
-    )
-}
-export default Navbar
-const HamburgerMenu = () => {
-    const [active, setActive] = useState("");
+  useEffect(() => {
+    const sectionIds = ["hero", ...menu.map((item) => item.link.replace("#", ""))];
+    const observers = sectionIds.map((id) => {
+      const el = document.getElementById(id);
+      if (!el) return null;
 
-    useEffect(() => {
-        menu.forEach((item) => {
-            ScrollTrigger.create({
-                trigger: item.link,
-                start: "top center",
-                end: "bottom center",
-                onEnter: () => setActive(item.id),
-                onEnterBack: () => setActive(item.id),
-            });
-        });
-    }, []);
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) setActive(id);
+        },
+        { rootMargin: "-40% 0px -55% 0px", threshold: 0 }
+      );
+      observer.observe(el);
+      return observer;
+    });
 
-    return (
-        <div className="bg-gradient-to-r from-[#6366F1]/70 to-[#14B8A6]/70 backdrop-blur-2xl shadow-inner md:rounded-full overflow-hidden text-secondary bottom-0 fixed inset-x-0 z-[999] block md:hidden max-md:py-2">
-            <div className="flex  w-full justify-between items-center px-3">
-                {menu.map((item) => (
-                    <Link
-                        key={item.id}
-                        href={item.link}
-                        className={`group flex items-center gap-1 rounded-md transition-all duration-500 ease-in-out 
-                            ${active === item.id && "bg-secondary text-black p-2"} `} >
-                        {item.icon}
-                        <span className={`overflow-hidden transition-all duration-500 ease-in-out
-             ${active === item.id ? "max-w-[100px] opacity-100 ml-1" : "max-w-0 opacity-0"} text-base md:text-xl font-medium`} >
-                            {item.name}
-                        </span>
-                    </Link>
-                ))}
-            </div>
+    return () => observers.forEach((o) => o?.disconnect());
+  }, []);
 
-        </div>
-    )
-}
+  return (
+    <>
+      <header
+        className={`fixed top-0 inset-x-0 z-50 transition-all duration-300 hidden md:block ${
+          scrolled ? "glass-surface border-b border-border py-3" : "bg-transparent py-5"
+        }`}
+      >
+        <nav className="mx-auto flex max-w-7xl items-center justify-between px-6 lg:px-12">
+          <Link href="#hero" className="focus-ring rounded-lg">
+            <Image src="/images/uz-logo-2.webp" width={44} height={44} alt="Unaiza Zafar logo" />
+          </Link>
+
+          <div className="hidden md:flex items-center gap-0.5 lg:gap-1">
+            {menu.map((item) => {
+              const sectionId = item.link.replace("#", "");
+              const isActive = active === sectionId;
+              return (
+                <Link
+                  key={item.id}
+                  href={item.link}
+                  className={`rounded-lg px-2.5 lg:px-4 py-2 text-xs lg:text-sm font-medium transition-all duration-300 focus-ring ${
+                    isActive
+                      ? "text-accent bg-accent/10"
+                      : "text-text-muted hover:text-text hover:bg-white/5"
+                  }`}
+                >
+                  {item.name}
+                </Link>
+              );
+            })}
+          </div>
+
+          <Button href="/Unaiza-Resume.pdf" download="Unaiza-Resume.pdf" variant="outline" className="!px-4 !py-2 text-sm">
+            Download CV
+          </Button>
+        </nav>
+      </header>
+
+      <MobileNav active={active} />
+    </>
+  );
+};
+
+const MobileNav = ({ active }) => {
+  return (
+    <nav className="fixed bottom-0 inset-x-0 z-50 glass-surface border-t border-border md:hidden">
+      <div className="flex w-full justify-around items-center px-2 py-2">
+        {menu.map((item) => {
+          const sectionId = item.link.replace("#", "");
+          const isActive = active === sectionId;
+          return (
+            <Link
+              key={item.id}
+              href={item.link}
+              className={`flex flex-col items-center gap-0.5 rounded-lg px-3 py-2 transition-all duration-300 focus-ring ${
+                isActive ? "text-accent" : "text-text-muted"
+              }`}
+            >
+              <span className="size-6">{item.icon}</span>
+              <span className="text-[10px] font-medium">{item.name.split(" ")[0]}</span>
+            </Link>
+          );
+        })}
+      </div>
+    </nav>
+  );
+};
+
+export default Navbar;

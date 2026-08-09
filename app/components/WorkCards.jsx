@@ -1,50 +1,72 @@
-import { githubIcon, websiteIcon } from "../utils/svgs"
-import Image from "next/image"
-import Link from "next/link"
-const WorkCards = ({ item }) => {
+import { githubIcon, websiteIcon } from "../utils/svgs";
+import Image from "next/image";
+import Link from "next/link";
+import Tags from "./Tags";
+import GlassCard from "./ui/GlassCard";
 
-    return (
-        <div className="lg:relative rounded-2xl overflow-hidden flex flex-col h-full">
-            <Image className="shrink-0 aspect-[5/2.5] lg:aspect-[5/3.5] w-full object-cover object-top"
-                width={0} height={0} priority unoptimized src={`/images/projects/${item.imageSrc}.webp`}
-                alt={item.imageAlt}
-            />
-            <div className={`flex flex-col flex-grow place-content-center gap-3 lg:absolute bg-purple-950 text-white bottom-0 p-5 backdrop-blur-2xl bg-blend-darken`}>
-                <p className="font-gamilia text-xl lg:text-2xl font-semibold tracking-wider">{item.name}</p>
-                <p className="text-base lg:text-lg">
-                    {item.desc}
-                </p>
-                {/* buttons */}
-                <div className="flex gap-4">
-                    {item.gitLink &&
-                        <Link
-                            href={item?.gitLink}
-                            className="w-max group relative flex items-center gap-2 px-2 lg:px-4 py-2 rounded-xl font-medium lg:text-lg  text-white bg-gradient-to-r from-purple-600 to-indigo-900 overflow-hidden transition-transform "
-                        >
-                            <span className="absolute left-0 top-0 h-full w-[120%] -translate-x-[10%] skew-x-12 bg-black transition-transform duration-500 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></span>
+const WorkCards = ({ item, featured = false }) => {
+  return (
+    <GlassCard
+      className={`group overflow-hidden transition-all duration-300 hover:-translate-y-1 hover:border-accent/30 hover:shadow-lg hover:shadow-accent/5 h-full flex flex-col ${
+        featured ? "md:min-h-[420px]" : ""
+      }`}
+    >
+      <div className="relative overflow-hidden aspect-[16/10] shrink-0">
+        <Image
+          className="w-full h-full object-cover object-top transition-transform duration-500 group-hover:scale-105"
+          width={600}
+          height={375}
+          unoptimized
+          src={`/images/projects/${item.imageSrc}.webp`}
+          alt={item.imageAlt}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-bg/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+      </div>
 
-                            <span className="relative z-10 flex items-center gap-2">
-                                <span className="size-5 lg:size-7">{githubIcon}</span>
-                                GitHub
-                            </span>
-                        </Link>
-                    }
-                    {item.webLink &&
-                        <Link
-                            href={item.webLink}
-                            className="w-max group relative flex items-center gap-2 px-2 lg:px-4 py-2 rounded-xl font-medium lg:text-lg  text-white bg-gradient-to-r from-pink-600 to-rose-400 overflow-hidden transition-transform "
-                        >
-                            <span className="absolute left-0 top-0 h-full w-[120%] -translate-x-[10%] skew-x-12 bg-black transition-transform duration-500 ease-[cubic-bezier(0.3,1,0.8,1)] group-hover:translate-x-full"></span>
+      <div className="flex flex-col flex-grow gap-3 p-5">
+        <h3 className="font-gamilia text-xl text-text">{item.name}</h3>
 
-                            <span className="relative z-10 flex items-center gap-2">
-                                <span className="size-5 lg:size-7">{websiteIcon}</span> Website
-                            </span>
-                        </Link>
-                    }
-                </div>
-            </div>
+        {item.tags && (
+          <div className="flex flex-wrap gap-2">
+            {item.tags.map((tag) => (
+              <Tags key={tag} text={tag} />
+            ))}
+          </div>
+        )}
+
+        <p className="text-sm text-text-muted line-clamp-3 flex-grow">
+          {typeof item.desc === "string" ? item.desc : "Built with modern frontend technologies."}
+        </p>
+
+        <div className="flex gap-3 pt-2">
+          {item.gitLink && (
+            <Link
+              href={item.gitLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`View ${item.name} on GitHub`}
+              className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-text-muted hover:text-accent hover:bg-accent/10 transition-all duration-300 focus-ring"
+            >
+              <span className="size-5">{githubIcon}</span>
+              GitHub
+            </Link>
+          )}
+          {item.webLink && (
+            <Link
+              href={item.webLink}
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label={`Visit ${item.name} live site`}
+              className="inline-flex items-center gap-2 rounded-lg px-3 py-2 text-sm text-text-muted hover:text-accent hover:bg-accent/10 transition-all duration-300 focus-ring"
+            >
+              <span className="size-5">{websiteIcon}</span>
+              Live
+            </Link>
+          )}
         </div>
-    )
-}
+      </div>
+    </GlassCard>
+  );
+};
 
-export default WorkCards
+export default WorkCards;

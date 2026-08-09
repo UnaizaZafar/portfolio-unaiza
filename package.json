@@ -2,6 +2,9 @@
   "name": "portfolio-next",
   "version": "0.1.0",
   "private": true,
+  "engines": {
+    "node": ">=20 <23"
+  },
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -9,14 +12,10 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@react-three/drei": "^10.1.2",
-    "@react-three/fiber": "^9.1.2",
     "gsap": "^3.13.0",
     "next": "15.3.3",
     "react": "^19.0.0",
-    "react-dom": "^19.0.0",
-    "swiper": "^11.2.10",
-    "three": "^0.177.0"
+    "react-dom": "^19.0.0"
   },
   "devDependencies": {
     "@tailwindcss/postcss": "^4",

@@ -1,72 +1,49 @@
-import { skills } from "../utils/data"
+"use client";
+
+import { useRef } from "react";
+import { pendingCustomIcons, skillCatalog } from "../utils/skillIcons";
+import DeviconIcon from "./DeviconIcon";
+import SectionWrapper from "./ui/SectionWrapper";
+import SectionHeading from "./ui/SectionHeading";
+import GlassCard from "./ui/GlassCard";
+import useScrollReveal from "../hooks/useScrollReveal";
+
 const SkillSet = () => {
+  const gridRef = useRef(null);
+  useScrollReveal(gridRef, ".skill-item", { y: 16, stagger: 0.04 });
 
-    //     const logos = gsap.utils.toArray(".logo-img");
+  return (
+    <SectionWrapper id="skill-set" className="pb-24 md:pb-[clamp(4rem,10vh,8rem)]">
+      <SectionHeading
+        eyebrow="Toolkit"
+        title="Skills & Tools"
+        subtitle="Icons from Devicon — custom image assets will be added for tools not yet in the library."
+      />
 
-    //     const shuffled = [...logos].sort(() => Math.random() - 0.5);
-
-    //     // Initial state: hidden, above, and big
-    //     gsap.set(shuffled, {
-    //         opacity: 0,
-    //         scale: 1.3,
-    //         y: -100, // 👈 above their actual position
-    //     });
-
-    //     gsap.to(shuffled, {
-    //         opacity: 1,
-    //         scale: 1,
-    //         y: 0, // 👈 land into place
-    //         duration: 0.8,
-    //         stagger: {
-    //             each: 0.2,
-    //             amount: 3,
-    //             from: "random",
-    //         },
-    //         ease: "power3.out",
-    //         scrollTrigger: {
-    //             trigger: containerRef.current,
-    //             start: "top 80%",
-    //             toggleActions: "play none none none",
-    //         },
-    //     });
-    // }, []);
-    return (
-        <div id="skill-set"
-            className="flex flex-col gap-8 justify-center items-center px-6 py-8 xl:px-32 mx-auto"
-        >
-            <p className="font-gamilia text-5xl sm:text-6xl md:text-7xl 2xl:text-8xl text-white text-center">My Digital Paintbox</p>
-            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
-                {skills.map((skill, i) => {
-                    return (
-                        <div className=" rounded-lg py-10 px-6 flex justify-center items-center aspect-square bg-gradient-to-r from-neutral-600 to-cyan-950 overflow-hidden hover:scale-105 transition-all duration-300" key={i}>
-                            {skill.icon}
-                        </div>
-                    )
-                })}
-            </div>
-
-
-
-            <p className="text-xl/loose lg:text-2xl/loose text-secondary">And the learning never stops — more skills are always on the way</p>
-        </div>
-    )
-}
-
-export default SkillSet
-
-{/* Logos marquee */ }
-{/* <div className="w-full overflow-hidden inline-flex flex-nowrap gap-24 lg:py-4.5 px-20">
-                <div className="flex animate-infinite-scroll gap-24 items-center justify-center [&_img]:max-w-none">
-                    {Array.from({ length: 8 }, (_, i) => (
-                        <img src={`/logos/tool-${i + 1}.png`} alt={i + 1} key={i} className="w-max object-cover h-20" />
-                    ))}
-                </div>
-                <div
-                    aria-hidden="true"
-                    className="flex animate-infinite-scroll gap-24 items-center justify-center [&_img]:max-w-none"
+      <div ref={gridRef} className="flex flex-col gap-12">
+        {skillCatalog.map((category) => (
+          <div key={category.name}>
+            <h3 className="font-mono text-sm uppercase tracking-[0.15em] text-accent mb-6">
+              {category.name}
+            </h3>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+              {category.skills.map((skill) => (
+                <GlassCard
+                  key={skill.label}
+                  className="skill-item flex flex-col items-center justify-center gap-3 p-6 aspect-square transition-all duration-300 hover:border-accent/40 hover:-translate-y-1"
                 >
-                    {Array.from({ length: 8 }, (_, i) => (
-                        <img src={`/logos/tool-${i + 1}.png`} alt={i + 1} key={i} className="w-max object-cover h-20" />
-                    ))}
-                </div>
-            </div> */}
+                  <DeviconIcon skill={skill} />
+                  <span className="font-mono text-xs text-text-muted text-center leading-snug">
+                    {skill.label}
+                  </span>
+                </GlassCard>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+    </SectionWrapper>
+  );
+};
+
+export default SkillSet;
